@@ -464,7 +464,9 @@ function Home() {
         <Reveal className="relative mx-auto max-w-3xl px-5 text-center text-white">
           <p className={`${EYEBROW} text-primary`}>Visit clinic</p>
           <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-            Comprehensive dental care for all ages
+            Comprehensive{" "}
+            <span className="text-primary text-glow-soft">dental care</span>{" "}
+            for all ages
           </h2>
           <p className="mt-5 text-white/80">
             Dhanvantari Nursing Home, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
