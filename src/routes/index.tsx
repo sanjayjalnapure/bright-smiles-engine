@@ -312,8 +312,13 @@ function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 lg:grid-cols-2">
+      <section id="about" className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/2 right-0 h-80 w-80 -translate-y-1/2 rounded-full bg-primary/10 blur-[100px]" />
+          <div className="absolute bottom-12 left-12 h-24 w-24 rounded-full border border-primary/15" />
+          <div className="absolute top-20 right-1/3 h-16 w-16 rounded-full bg-secondary/40 blur-xl" />
+        </div>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 lg:grid-cols-2">
           <Reveal from="left">
             <div className="relative pb-16 pl-0 sm:pl-12">
               <img
