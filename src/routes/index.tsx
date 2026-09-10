@@ -396,8 +396,13 @@ function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className="bg-secondary/60 py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5">
+      <section id="services" className="relative bg-secondary/60 py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
+          <div className="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-primary/8 blur-[100px]" />
+          <div className="absolute top-1/2 left-8 h-20 w-20 rounded-full border border-primary/10" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Our services</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
