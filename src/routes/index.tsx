@@ -583,8 +583,12 @@ function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5">
+      <section id="contact" className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/3 h-72 w-72 rounded-full bg-primary/10 blur-[100px]" />
+          <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-secondary/50 blur-[90px]" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Contact us</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Come in for a check-up</h2>
