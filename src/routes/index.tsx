@@ -338,6 +338,7 @@ function Home() {
                 "Fellowship in General Dentistry",
                 "Fellowship in Smile Designing",
                 "Fellowship in Cosmetic Dentistry",
+                "IDA Fellowship programme",
               ].map((q, i) => (
                 <Reveal key={q} delay={i * 100}>
                   <div className="flex items-center gap-3 text-sm font-semibold">
