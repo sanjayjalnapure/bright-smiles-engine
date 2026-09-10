@@ -591,7 +591,10 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Contact us</p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Come in for a check-up</h2>
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+              Come in for a{" "}
+              <span className="text-primary text-glow-soft">check-up</span>
+            </h2>
             <p className="mt-5 text-muted-foreground">
               Call or message us and we will find a time that suits you.
             </p>
