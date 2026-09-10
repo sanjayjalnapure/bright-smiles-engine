@@ -491,8 +491,13 @@ function Home() {
       </section>
 
       {/* Why us */}
-      <section id="why" className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5">
+      <section id="why" className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-1/3 h-72 w-72 rounded-full bg-primary/10 blur-[100px]" />
+          <div className="absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-secondary/50 blur-[90px]" />
+          <div className="absolute top-1/2 right-8 h-14 w-14 rounded-full border border-primary/10" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Why choose us</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
