@@ -233,6 +233,14 @@ function Home() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div aria-hidden className="surface-hero absolute inset-0" />
+
+        {/* Floating decorative shapes */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-24 right-[15%] h-32 w-32 rounded-full border border-white/10 opacity-40" />
+          <div className="absolute bottom-32 right-[10%] h-64 w-64 rounded-full bg-primary/10 blur-3xl opacity-50" />
+          <div className="absolute top-1/2 left-[8%] h-16 w-16 rounded-full border border-white/10 opacity-30" />
+        </div>
+
         <div className="relative mx-auto max-w-4xl px-5 text-center">
           <Reveal>
             <p className={`${EYEBROW} text-white/85`}>
@@ -243,7 +251,14 @@ function Home() {
           <Reveal delay={120}>
             <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold text-white sm:text-5xl md:text-7xl">
               Advanced Care for a{" "}
-              <span className="text-primary">Brighter, Healthier</span> Smile
+              <span className="relative inline-block">
+                <span className="text-primary text-glow">Brighter, Healthier</span>
+                <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/20 blur-2xl" />
+              </span>{" "}
+              <span className="relative inline-block">
+                <span className="text-white text-glow-soft">Smile</span>
+                <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/15 blur-2xl" />
+              </span>
             </h1>
           </Reveal>
           <Reveal delay={240}>
@@ -271,7 +286,7 @@ function Home() {
           <Reveal delay={440}>
             <p className="mt-8 text-sm text-white/75">
               B.D.S. (MUHS) · Fellowship in General Dentistry · Fellowship in Smile Designing &amp;
-              Cosmetic Dentistry
+              Cosmetic Dentistry · IDA Fellowship programme
             </p>
           </Reveal>
         </div>
