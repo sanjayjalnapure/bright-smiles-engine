@@ -131,7 +131,17 @@ function Home() {
   }, []);
 
   return (
-    <div id="home" className="min-h-screen bg-background">
+    <div id="home" className="relative min-h-screen overflow-hidden bg-background">
+      {/* Background decorative elements */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-32 -left-32 h-[32rem] w-[32rem] rounded-full bg-primary/20 blur-[120px]" />
+        <div className="absolute top-1/4 -right-32 h-[28rem] w-[28rem] rounded-full bg-secondary/50 blur-[100px]" />
+        <div className="absolute top-1/2 left-1/4 h-[36rem] w-[36rem] rounded-full bg-primary/12 blur-[140px]" />
+        <div className="absolute bottom-1/4 right-1/4 h-[26rem] w-[26rem] rounded-full bg-secondary/35 blur-[110px]" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-primary/15 blur-[100px]" />
+        <div className="bg-grid-dots absolute inset-0 opacity-50" />
+      </div>
+
       {/* Header */}
       <header
         className={`fixed inset-x-0 top-0 z-50 bg-background transition-all duration-300 ${
@@ -224,6 +234,14 @@ function Home() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div aria-hidden className="surface-hero absolute inset-0" />
+
+        {/* Floating decorative shapes */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-24 right-[15%] h-32 w-32 rounded-full border border-white/10 opacity-40" />
+          <div className="absolute bottom-32 right-[10%] h-64 w-64 rounded-full bg-primary/10 blur-3xl opacity-50" />
+          <div className="absolute top-1/2 left-[8%] h-16 w-16 rounded-full border border-white/10 opacity-30" />
+        </div>
+
         <div className="relative mx-auto max-w-4xl px-5 text-center">
           <Reveal>
             <p className={`${EYEBROW} text-white/85`}>
@@ -234,7 +252,14 @@ function Home() {
           <Reveal delay={120}>
             <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold text-white sm:text-5xl md:text-7xl">
               Advanced Care for a{" "}
-              <span className="text-primary">Brighter, Healthier</span> Smile
+              <span className="relative inline-block">
+                <span className="text-primary text-glow">Brighter, Healthier</span>
+                <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/20 blur-2xl" />
+              </span>{" "}
+              <span className="relative inline-block">
+                <span className="text-white text-glow-soft">Smile</span>
+                <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/15 blur-2xl" />
+              </span>
             </h1>
           </Reveal>
           <Reveal delay={240}>
@@ -262,7 +287,7 @@ function Home() {
           <Reveal delay={440}>
             <p className="mt-8 text-sm text-white/75">
               B.D.S. (MUHS) · Fellowship in General Dentistry · Fellowship in Smile Designing &amp;
-              Cosmetic Dentistry
+              Cosmetic Dentistry · IDA Fellowship programme
             </p>
           </Reveal>
         </div>
@@ -287,8 +312,13 @@ function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 lg:grid-cols-2">
+      <section id="about" className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/2 right-0 h-80 w-80 -translate-y-1/2 rounded-full bg-primary/10 blur-[100px]" />
+          <div className="absolute bottom-12 left-12 h-24 w-24 rounded-full border border-primary/15" />
+          <div className="absolute top-20 right-1/3 h-16 w-16 rounded-full bg-secondary/40 blur-xl" />
+        </div>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 lg:grid-cols-2">
           <Reveal from="left">
             <div className="relative pb-16 pl-0 sm:pl-12">
               <img
@@ -366,12 +396,19 @@ function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className="bg-secondary/60 py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5">
+      <section id="services" className="relative bg-secondary/60 py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
+          <div className="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-primary/10 blur-[100px]" />
+          <div className="absolute top-1/2 left-8 h-20 w-20 rounded-full border border-primary/10" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Our services</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              Expert dental care for every need
+              Expert{" "}
+              <span className="text-primary text-glow-soft">dental care</span>{" "}
+              for every need
             </h2>
             <p className="mt-5 text-muted-foreground">
               From routine check-ups to smile makeovers — planned around your teeth, your comfort
@@ -427,7 +464,9 @@ function Home() {
         <Reveal className="relative mx-auto max-w-3xl px-5 text-center text-white">
           <p className={`${EYEBROW} text-primary`}>Visit clinic</p>
           <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-            Comprehensive dental care for all ages
+            Comprehensive{" "}
+            <span className="text-primary text-glow-soft">dental care</span>{" "}
+            for all ages
           </h2>
           <p className="mt-5 text-white/80">
             Dhanvantari Nursing Home, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
@@ -452,12 +491,18 @@ function Home() {
       </section>
 
       {/* Why us */}
-      <section id="why" className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5">
+      <section id="why" className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-1/3 h-72 w-72 rounded-full bg-primary/10 blur-[100px]" />
+          <div className="absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-secondary/50 blur-[90px]" />
+          <div className="absolute top-1/2 right-8 h-14 w-14 rounded-full border border-primary/10" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Why choose us</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              A higher standard of dental care
+              A higher standard of{" "}
+              <span className="text-primary text-glow-soft">dental care</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
               Advanced training, careful hands and a calm environment — so treatment feels simple
@@ -481,8 +526,12 @@ function Home() {
       </section>
 
       {/* Doctor */}
-      <section className="bg-secondary/60 py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5">
+      <section className="relative bg-secondary/60 py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-0 h-80 w-80 rounded-full bg-primary/10 blur-[110px]" />
+          <div className="absolute bottom-1/4 right-0 h-72 w-72 rounded-full bg-primary/10 blur-[100px]" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Meet your dentist</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Dr. Sanika S. K. Phadke</h2>
@@ -534,11 +583,18 @@ function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5">
+      <section id="contact" className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/3 h-72 w-72 rounded-full bg-primary/10 blur-[100px]" />
+          <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-secondary/50 blur-[90px]" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Contact us</p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Come in for a check-up</h2>
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+              Come in for a{" "}
+              <span className="text-primary text-glow-soft">check-up</span>
+            </h2>
             <p className="mt-5 text-muted-foreground">
               Call or message us and we will find a time that suits you.
             </p>

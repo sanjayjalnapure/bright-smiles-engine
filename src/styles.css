@@ -188,3 +188,19 @@
 @utility shadow-lift {
   box-shadow: var(--shadow-lift);
 }
+
+@utility text-glow {
+  text-shadow:
+    0 0 28px oklch(0.7 0.175 133 / 0.45),
+    0 0 60px oklch(0.7 0.175 133 / 0.22);
+}
+
+@utility text-glow-soft {
+  text-shadow: 0 0 18px oklch(0.7 0.175 133 / 0.35);
+}
+
+@utility bg-grid-dots {
+  background-image: radial-gradient(circle, oklch(0.55 0.025 160 / 0.13) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
