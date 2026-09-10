@@ -134,11 +134,12 @@ function Home() {
     <div id="home" className="relative min-h-screen overflow-hidden bg-background">
       {/* Background decorative elements */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary/15 blur-3xl opacity-60" />
-        <div className="absolute top-1/3 -right-24 h-80 w-80 rounded-full bg-secondary/40 blur-3xl opacity-70" />
-        <div className="absolute bottom-1/4 left-1/4 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[120px] opacity-50" />
-        <div className="absolute top-2/3 right-1/4 h-72 w-72 rounded-full bg-secondary/30 blur-[100px] opacity-40" />
-        <div className="bg-grid-dots absolute inset-0 opacity-40" />
+        <div className="absolute -top-32 -left-32 h-[32rem] w-[32rem] rounded-full bg-primary/20 blur-[120px]" />
+        <div className="absolute top-1/4 -right-32 h-[28rem] w-[28rem] rounded-full bg-secondary/50 blur-[100px]" />
+        <div className="absolute top-1/2 left-1/4 h-[36rem] w-[36rem] rounded-full bg-primary/12 blur-[140px]" />
+        <div className="absolute bottom-1/4 right-1/4 h-[26rem] w-[26rem] rounded-full bg-secondary/35 blur-[110px]" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-primary/15 blur-[100px]" />
+        <div className="bg-grid-dots absolute inset-0 opacity-50" />
       </div>
 
       {/* Header */}
