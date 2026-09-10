@@ -526,8 +526,12 @@ function Home() {
       </section>
 
       {/* Doctor */}
-      <section className="bg-secondary/60 py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5">
+      <section className="relative bg-secondary/60 py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-0 h-80 w-80 rounded-full bg-primary/10 blur-[110px]" />
+          <div className="absolute bottom-1/4 right-0 h-72 w-72 rounded-full bg-primary/10 blur-[100px]" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Meet your dentist</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Dr. Sanika S. K. Phadke</h2>
