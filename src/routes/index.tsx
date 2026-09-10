@@ -496,7 +496,8 @@ function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Why choose us</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              A higher standard of dental care
+              A higher standard of{" "}
+              <span className="text-primary text-glow-soft">dental care</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
               Advanced training, careful hands and a calm environment — so treatment feels simple
