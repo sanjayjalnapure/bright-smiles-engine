@@ -406,7 +406,9 @@ function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Our services</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              Expert dental care for every need
+              Expert{" "}
+              <span className="text-primary text-glow-soft">dental care</span>{" "}
+              for every need
             </h2>
             <p className="mt-5 text-muted-foreground">
               From routine check-ups to smile makeovers — planned around your teeth, your comfort
