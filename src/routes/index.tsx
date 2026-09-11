@@ -534,7 +534,7 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>Meet your dentist</p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Dr. Sanika S. K. Phadke</h2>
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Dr. Sanika Sudha Kiranchandra Phadke</h2>
           </Reveal>
           <div className="mt-14 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
             <Reveal from="left">
