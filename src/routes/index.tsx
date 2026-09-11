@@ -20,6 +20,7 @@ import {
   MessageCircle,
   Scan,
   Box,
+  Armchair,
 } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
@@ -32,6 +33,7 @@ import generalDentistry from "@/assets/general-dentistry.jpg";
 import cosmeticDentistry from "@/assets/cosmetic-dentistry.jpg";
 import digitalXray from "@/assets/digital-xray.jpg";
 import printing3d from "@/assets/3d-printing.jpg";
+import dentalChair from "@/assets/dental-chair-unit.jpg.asset.json";
 import doctorPhoto from "@/assets/doctor-sanika-phadke.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -112,6 +114,12 @@ const SERVICES = [
     image: printing3d,
     icon: Box,
     text: "Precise 3D-printed tooth models for treatment planning, crowns, aligners and patient education.",
+  },
+  {
+    title: "Advanced Dental Chair Unit",
+    image: dentalChair.url,
+    icon: Armchair,
+    text: "A fully equipped, ergonomic dental chair unit designed for patient comfort and precise treatment delivery.",
   },
 ];
 
