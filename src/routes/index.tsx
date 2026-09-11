@@ -160,8 +160,10 @@ function Home() {
 
       {/* Header */}
       <header
-        className={`fixed inset-x-0 top-0 z-50 bg-background transition-all duration-300 ${
-          scrolled ? "py-2 shadow-soft" : "py-3"
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-background/70 py-2 shadow-soft backdrop-blur-md"
+            : "bg-transparent py-3"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5">
