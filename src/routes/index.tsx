@@ -555,14 +555,14 @@ function Home() {
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Dr. Sanika Sudha Kiranchandra Phadke</h2>
           </Reveal>
           <div className="mt-14 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-            <Reveal from="left">
+            <Reveal from="left" className="flex h-full items-center justify-center lg:justify-start">
               <img
                 src={doctorPhoto.url}
                 alt="Dr. Sanika Sudha Kiranchandra Phadke at Dhanvantari Multispeciality Dental Clinic"
                 loading="lazy"
                 width={852}
                 height={1280}
-                className="mx-auto w-full max-w-md rounded-[2rem] object-cover shadow-lift lg:mx-0 lg:max-w-none"
+                className="max-h-[620px] w-full rounded-[2rem] object-cover object-top shadow-lift"
               />
             </Reveal>
             <Reveal from="right" delay={120}>
