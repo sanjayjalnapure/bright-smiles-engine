@@ -32,7 +32,7 @@ import generalDentistry from "@/assets/general-dentistry.jpg";
 import cosmeticDentistry from "@/assets/cosmetic-dentistry.jpg";
 import digitalXray from "@/assets/digital-xray.jpg";
 import printing3d from "@/assets/3d-printing.jpg";
-import doctorPhoto from "@/assets/doctor.jpg";
+import doctorPhoto from "@/assets/doctor-sanika-phadke.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -555,14 +555,14 @@ function Home() {
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Dr. Sanika Sudha Kiranchandra Phadke</h2>
           </Reveal>
           <div className="mt-14 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-            <Reveal from="left">
+            <Reveal from="left" className="flex h-full items-center justify-center lg:justify-start">
               <img
-                src={doctorPhoto}
-                alt="Dr. Sanika Phadke at Dhanvantari Multispeciality Dental Clinic"
+                src={doctorPhoto.url}
+                alt="Dr. Sanika Sudha Kiranchandra Phadke at Dhanvantari Multispeciality Dental Clinic"
                 loading="lazy"
-                width={1008}
-                height={1312}
-                className="w-full rounded-[2rem] object-cover shadow-lift"
+                width={852}
+                height={1280}
+                className="max-h-[620px] w-full rounded-[2rem] object-cover object-top shadow-lift"
               />
             </Reveal>
             <Reveal from="right" delay={120}>
