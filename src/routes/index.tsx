@@ -30,6 +30,8 @@ import heroClinic from "@/assets/hero-clinic.jpg";
 import smileDesign from "@/assets/smile-design.jpg";
 import generalDentistry from "@/assets/general-dentistry.jpg";
 import cosmeticDentistry from "@/assets/cosmetic-dentistry.jpg";
+import digitalXray from "@/assets/digital-xray.jpg";
+import printing3d from "@/assets/3d-printing.jpg";
 import doctorPhoto from "@/assets/doctor.jpg";
 
 export const Route = createFileRoute("/")({
@@ -98,6 +100,18 @@ const SERVICES = [
     image: heroClinic,
     icon: ShieldCheck,
     text: "Single-visit root canal therapy with modern rotary instruments and effective local anaesthesia.",
+  },
+  {
+    title: "Digital X-Ray",
+    image: digitalXray,
+    icon: Scan,
+    text: "Low-radiation digital radiography for instant, high-resolution images that guide accurate diagnosis.",
+  },
+  {
+    title: "3D Printing of Tooth Models",
+    image: printing3d,
+    icon: Box,
+    text: "Precise 3D-printed tooth models for treatment planning, crowns, aligners and patient education.",
   },
 ];
 
