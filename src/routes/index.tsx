@@ -18,6 +18,8 @@ import {
   Timer,
   HeartHandshake,
   MessageCircle,
+  Scan,
+  Box,
 } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
