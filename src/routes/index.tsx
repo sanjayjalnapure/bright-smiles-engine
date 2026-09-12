@@ -80,40 +80,40 @@ const getNav = (lang: Language) => [
   { label: "Contact Us", href: "#contact" },
 ];
 
-const STATS = [
-  { n: 2, s: "", l: "Fellowships" },
-  { n: 3, s: "", l: "Core Specialities" },
-  { n: 100, s: "%", l: "Sterile Protocol" },
-  { n: 1, s: ":1", l: "Doctor Attention" },
+const getStats = (lang: Language) => [
+  { n: 2, s: "", l: lang === "mr" ? "फेलोशिप्स" : "Fellowships" },
+  { n: 3, s: "", l: lang === "mr" ? "मुख्य वैशिष्ट्ये" : "Core Specialities" },
+  { n: 100, s: "%", l: lang === "mr" ? "निर्जंतुक प्रोटोकॉल" : "Sterile Protocol" },
+  { n: 1, s: ":1", l: lang === "mr" ? "डॉक्टरांचे लक्ष" : "Doctor Attention" },
 ];
 
-const SERVICES = [
+const getServices = (lang: Language) => [
   {
-    title: "General Dentistry",
+    title: lang === "mr" ? "सामान्य दंतचिकित्सा" : "General Dentistry",
     image: generalDentistry,
     icon: Stethoscope,
     text: "Check-ups, scaling, tooth-coloured fillings, root canal treatment and extractions — done gently and hygienically.",
   },
   {
-    title: "Smile Designing",
+    title: lang === "mr" ? "स्माईल डिझायनिंग" : "Smile Designing",
     image: smileDesign,
     icon: Smile,
     text: "A smile planned around your face — shape, shade and proportion balanced so the result still looks like you.",
   },
   {
-    title: "Cosmetic Dentistry",
+    title: lang === "mr" ? "कॉस्मेटिक दंतचिकित्सा" : "Cosmetic Dentistry",
     image: cosmeticDentistry,
     icon: Sparkles,
     text: "Veneers, whitening and ceramic crowns using precise, tooth-friendly techniques for a natural finish.",
   },
   {
-    title: "Painless Root Canals",
+    title: lang === "mr" ? "वेदनारहित रूट कॅनॉल" : "Painless Root Canals",
     image: heroClinic,
     icon: ShieldCheck,
     text: "Single-visit root canal therapy with modern rotary instruments and effective local anaesthesia.",
   },
   {
-    title: "Digital X-Ray",
+    title: lang === "mr" ? "डिजिटल एक्स-रे" : "Digital X-Ray",
     image: digitalXray,
     icon: Scan,
     text: "Low-radiation digital radiography for instant, high-resolution images that guide accurate diagnosis.",
@@ -125,14 +125,14 @@ const SERVICES = [
     text: "Precise 3D-printed tooth models for treatment planning, crowns, aligners and patient education.",
   },
   {
-    title: "Advanced Dental Chair Unit",
+    title: lang === "mr" ? "प्रगत डेंटल चेअर युनिट" : "Advanced Dental Chair Unit",
     image: dentalChair,
     icon: Armchair,
-    text: "A fully equipped, ergonomic dental chair unit designed for patient comfort and precise treatment delivery.",
+    text: lang === "mr" ? "रुग्णांच्या सोयीसाठी आणि अचूक उपचारांसाठी पूर्णपणे सुसज्ज डेंटल चेअर युनिट." : "A fully equipped, ergonomic dental chair unit designed for patient comfort and precise treatment delivery.",
   },
 ];
 
-const WHY = [
+const getWhy = (lang: Language) => [
   {
     icon: HeartHandshake,
     title: "Maximum Comfort",
@@ -150,36 +150,36 @@ const WHY = [
   },
 ];
 
-const CASES = [
+const getCases = (lang: Language) => [
   {
     image: case6,
-    treatment: "Complete Smile Makeover",
-    description: "Gap closure, shape correction, and teeth whitening achieved through customized ceramic restorations for a flawless smile.",
+    treatment: lang === "mr" ? "संपूर्ण स्माईल मेकओव्हर" : "Complete Smile Makeover",
+    description: lang === "mr" ? "सानुकूलित सिरॅमिक रिस्टोरेशनद्वारे गॅप बंद करणे, आकार सुधारणे आणि दात पांढरे करणे." : "Gap closure, shape correction, and teeth whitening achieved through customized ceramic restorations for a flawless smile.",
   },
   {
     image: case1,
-    treatment: "Deep Scaling & Polishing",
-    description: "Complete removal of heavy tartar, calculus, and stains to restore healthy gums and clean teeth.",
+    treatment: lang === "mr" ? "डीप स्केलिंग आणि पॉलिशिंग" : "Deep Scaling & Polishing",
+    description: lang === "mr" ? "निरोगी हिरड्या आणि स्वच्छ दात पुनर्संचयित करण्यासाठी टार्टर आणि डाग पूर्णपणे काढून टाकणे." : "Complete removal of heavy tartar, calculus, and stains to restore healthy gums and clean teeth.",
   },
   {
     image: case2,
-    treatment: "Single Tooth Restoration",
-    description: "A discolored, non-vital front tooth flawlessly restored to match natural teeth using a metal-free ceramic crown.",
+    treatment: lang === "mr" ? "सिंगल टूथ रिस्टोरेशन" : "Single Tooth Restoration",
+    description: lang === "mr" ? "धातू-मुक्त सिरॅमिक क्राउन वापरून नैसर्गिक दातांशी जुळण्यासाठी रंगहीन दात पुनर्संचयित केला." : "A discolored, non-vital front tooth flawlessly restored to match natural teeth using a metal-free ceramic crown.",
   },
   {
     image: case3,
-    treatment: "Diastema (Gap) Closure",
-    description: "Unappealing gaps between upper and lower teeth closed beautifully using customized tooth-colored restorations.",
+    treatment: lang === "mr" ? "गॅप क्लोजर (Diastema)" : "Diastema (Gap) Closure",
+    description: lang === "mr" ? "वरच्या आणि खालच्या दातांमधील अंतर दात-रंगाच्या रिस्टोरेशनचा वापर करून सुंदरपणे बंद केले." : "Unappealing gaps between upper and lower teeth closed beautifully using customized tooth-colored restorations.",
   },
   {
     image: case4,
-    treatment: "Composite Bonding",
-    description: "Front teeth gaps closed and surface imperfections masked with aesthetic, minimally invasive composite bonding.",
+    treatment: lang === "mr" ? "कंपोझिट बाँडिंग" : "Composite Bonding",
+    description: lang === "mr" ? "दातांमधील अंतर बंद केले आणि कंपोझिट बाँडिंगसह पृष्ठभागावरील अपूर्णता झाकली." : "Front teeth gaps closed and surface imperfections masked with aesthetic, minimally invasive composite bonding.",
   },
   {
     image: case5,
-    treatment: "Orthodontic Alignment",
-    description: "Severe crowding and misalignment corrected to achieve a perfectly straight, harmonious smile.",
+    treatment: lang === "mr" ? "ऑर्थोडोंटिक अलाइनमेंट" : "Orthodontic Alignment",
+    description: lang === "mr" ? "परिपूर्ण सरळ, कर्णमधुर हास्य प्राप्त करण्यासाठी गर्दी आणि चुकीची संरेखन दुरुस्त केली." : "Severe crowding and misalignment corrected to achieve a perfectly straight, harmonious smile.",
   },
 ];
 
@@ -374,7 +374,7 @@ function Home() {
       {/* Stats band */}
       <section className="bg-primary-deep py-12">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-5 lg:grid-cols-4">
-          {STATS.map((s, i) => (
+          {getStats(lang).map((s, i) => (
             <Reveal
               key={s.l}
               delay={i * 110}
@@ -495,7 +495,7 @@ function Home() {
           </Reveal>
 
           <div className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-            {SERVICES.map((s, i) => (
+            {getServices(lang).map((s, i) => (
               <Reveal key={s.title} delay={i * 120}>
                 <article className="card-lift group h-full overflow-hidden rounded-[1.5rem] bg-card shadow-soft">
                   <div className="relative h-44 overflow-hidden">
@@ -555,7 +555,7 @@ function Home() {
 
           {/* Cases grid — show first 2 on initial load, expand to all */}
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {(showAllCases ? CASES : CASES.slice(0, 3)).map((c, i) => (
+            {(showAllCases ? CASES : getCases(lang).slice(0, 3)).map((c, i) => (
               <Reveal key={i} delay={i * 120}>
                 <article className="card-lift group overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-soft">
                   <div className="relative overflow-hidden">
@@ -593,13 +593,13 @@ function Home() {
           </div>
 
           {/* Show more / less toggle */}
-          {CASES.length > 3 && (
+          {getCases(lang).length > 3 && (
             <Reveal delay={400} className="mt-10 text-center">
               <button
                 onClick={() => setShowAllCases((v) => !v)}
                 className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-sm font-semibold shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lift"
               >
-                {showAllCases ? "Show less" : `View all ${CASES.length} cases`}
+                {showAllCases ? "Show less" : `View all ${getCases(lang).length} cases`}
                 <ChevronDown
                   className={`h-4 w-4 text-primary transition-transform duration-300 ${showAllCases ? "rotate-180" : ""}`}
                 />
@@ -678,7 +678,7 @@ function Home() {
             </p>
           </Reveal>
           <div className="mt-14 grid gap-7 md:grid-cols-3">
-            {WHY.map((w, i) => (
+            {getWhy(lang).map((w, i) => (
               <Reveal key={w.title} delay={i * 130}>
                 <div className="card-lift h-full rounded-[1.5rem] border border-border bg-card p-8 text-center">
                   <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-secondary">
@@ -786,8 +786,8 @@ function Home() {
                 },
                 {
                   icon: Clock,
-                  title: "Clinic timings",
-                  body: "Mon–Sat: 11 AM – 1 PM & 5 PM – 10 PM\nSunday: 11 AM – 2 PM",
+                  title: lang === "mr" ? "क्लिनिकची वेळ" : "Clinic timings",
+                  body: lang === "mr" ? "सोम-शनि: सकाळी ११ ते दुपारी १ आणि संध्याकाळी ५ ते रात्री १०\nरविवार: सकाळी ११ ते दुपारी २" : "Mon–Sat: 11 AM – 1 PM & 5 PM – 10 PM\nSunday: 11 AM – 2 PM",
                   href: `tel:${PHONE}`,
                 },
               ].map((c, i) => (
