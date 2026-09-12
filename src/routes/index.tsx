@@ -81,10 +81,10 @@ const getNav = (lang: Language) => [
 ];
 
 const getStats = (lang: Language) => [
-  { n: 2, s: "", l: lang === "mr" ? "फेलोशिप्स" : "Fellowships" },
-  { n: 3, s: "", l: lang === "mr" ? "मुख्य वैशिष्ट्ये" : "Core Specialities" },
-  { n: 100, s: "%", l: lang === "mr" ? "निर्जंतुक प्रोटोकॉल" : "Sterile Protocol" },
-  { n: 1, s: ":1", l: lang === "mr" ? "डॉक्टरांचे लक्ष" : "Doctor Attention" },
+  { n: 2, s: "", l: lang === "mr" ? "फेलोशिप" : "Fellowships" },
+  { n: 3, s: "", l: lang === "mr" ? "प्रमुख विशेष उपचार" : "Core Specialities" },
+  { n: 100, s: "%", l: lang === "mr" ? "निर्जंतुकीकरण नियमावली" : "Sterile Protocol" },
+  { n: 1, s: ":1", l: lang === "mr" ? "डॉक्टरांचे वैयक्तिक लक्ष" : "Doctor Attention" },
 ];
 
 const getServices = (lang: Language) => [
@@ -92,37 +92,37 @@ const getServices = (lang: Language) => [
     title: lang === "mr" ? "सामान्य दंतचिकित्सा" : "General Dentistry",
     image: generalDentistry,
     icon: Stethoscope,
-    text: "Check-ups, scaling, tooth-coloured fillings, root canal treatment and extractions — done gently and hygienically.",
+    text: lang === "mr" ? "नियमित तपासणी, स्केलिंग, दातांच्या रंगाचे फिलिंग, रूट कॅनॉल आणि दात काढणे — सौम्य व स्वच्छ पद्धतीने." : "Check-ups, scaling, tooth-coloured fillings, root canal treatment and extractions — done gently and hygienically.",
   },
   {
     title: lang === "mr" ? "स्माईल डिझायनिंग" : "Smile Designing",
     image: smileDesign,
     icon: Smile,
-    text: "A smile planned around your face — shape, shade and proportion balanced so the result still looks like you.",
+    text: lang === "mr" ? "तुमच्या चेहऱ्याला अनुरूप हास्याची रचना — दातांचा आकार, रंगछटा आणि प्रमाण यांचा नैसर्गिक समतोल." : "A smile planned around your face — shape, shade and proportion balanced so the result still looks like you.",
   },
   {
     title: lang === "mr" ? "कॉस्मेटिक दंतचिकित्सा" : "Cosmetic Dentistry",
     image: cosmeticDentistry,
     icon: Sparkles,
-    text: "Veneers, whitening and ceramic crowns using precise, tooth-friendly techniques for a natural finish.",
+    text: lang === "mr" ? "नैसर्गिक दिसणाऱ्या परिणामासाठी अचूक व दातांसाठी सुरक्षित पद्धतीने व्हिनिअर्स, दात पांढरे करणे आणि सिरॅमिक क्राउन." : "Veneers, whitening and ceramic crowns using precise, tooth-friendly techniques for a natural finish.",
   },
   {
     title: lang === "mr" ? "वेदनारहित रूट कॅनॉल" : "Painless Root Canals",
     image: heroClinic,
     icon: ShieldCheck,
-    text: "Single-visit root canal therapy with modern rotary instruments and effective local anaesthesia.",
+    text: lang === "mr" ? "आधुनिक रोटरी उपकरणे आणि प्रभावी स्थानिक भूल वापरून एकाच भेटीत रूट कॅनॉल उपचार." : "Single-visit root canal therapy with modern rotary instruments and effective local anaesthesia.",
   },
   {
     title: lang === "mr" ? "डिजिटल एक्स-रे" : "Digital X-Ray",
     image: digitalXray,
     icon: Scan,
-    text: "Low-radiation digital radiography for instant, high-resolution images that guide accurate diagnosis.",
+    text: lang === "mr" ? "अचूक निदानासाठी कमी किरणोत्सर्गात त्वरित आणि स्पष्ट डिजिटल एक्स-रे प्रतिमा." : "Low-radiation digital radiography for instant, high-resolution images that guide accurate diagnosis.",
   },
   {
-    title: "3D Printing of Tooth Models",
+    title: lang === "mr" ? "दातांच्या मॉडेल्सची अचूक ३डी प्रिंटिंग" : "3D Printing of Tooth Models",
     image: printing3d,
     icon: Box,
-    text: "Precise 3D-printed tooth models for treatment planning, crowns, aligners and patient education.",
+    text: lang === "mr" ? "उपचारांचे नियोजन, क्राउन, अलाइनर आणि रुग्णांना माहिती देण्यासाठी दातांची अचूक ३डी-प्रिंटेड मॉडेल्स." : "Precise 3D-printed tooth models for treatment planning, crowns, aligners and patient education.",
   },
   {
     title: lang === "mr" ? "प्रगत डेंटल चेअर युनिट" : "Advanced Dental Chair Unit",
@@ -135,18 +135,18 @@ const getServices = (lang: Language) => [
 const getWhy = (lang: Language) => [
   {
     icon: HeartHandshake,
-    title: "Maximum Comfort",
-    text: "Calm, unhurried treatment with everything explained in plain language before it begins.",
+    title: lang === "mr" ? "जास्तीत जास्त आराम" : "Maximum Comfort",
+    text: lang === "mr" ? "उपचार सुरू करण्यापूर्वी प्रत्येक बाब सोप्या भाषेत समजावून, शांतपणे आणि पुरेसा वेळ देऊन उपचार केले जातात." : "Calm, unhurried treatment with everything explained in plain language before it begins.",
   },
   {
     icon: Timer,
-    title: "Optimal Efficiency",
-    text: "Appointment-based slots so your treatment starts on time, with minimal waiting.",
+    title: lang === "mr" ? "वेळेचे योग्य नियोजन" : "Optimal Efficiency",
+    text: lang === "mr" ? "पूर्वनियोजित अपॉइंटमेंटमुळे कमीत कमी प्रतीक्षा आणि वेळेवर उपचार." : "Appointment-based slots so your treatment starts on time, with minimal waiting.",
   },
   {
     icon: ShieldCheck,
-    title: "Uncompromising Safety",
-    text: "Autoclaved instruments and single-use disposables for every single patient, every visit.",
+    title: lang === "mr" ? "सुरक्षिततेत कोणतीही तडजोड नाही" : "Uncompromising Safety",
+    text: lang === "mr" ? "प्रत्येक रुग्णासाठी, प्रत्येक भेटीत ऑटोक्लेव्हद्वारे निर्जंतुक केलेली उपकरणे आणि एकदाच वापरण्याचे साहित्य." : "Autoclaved instruments and single-use disposables for every single patient, every visit.",
   },
 ];
 
@@ -154,32 +154,32 @@ const getCases = (lang: Language) => [
   {
     image: case6,
     treatment: lang === "mr" ? "संपूर्ण स्माईल मेकओव्हर" : "Complete Smile Makeover",
-    description: lang === "mr" ? "सानुकूलित सिरॅमिक रिस्टोरेशनद्वारे गॅप बंद करणे, आकार सुधारणे आणि दात पांढरे करणे." : "Gap closure, shape correction, and teeth whitening achieved through customized ceramic restorations for a flawless smile.",
+    description: lang === "mr" ? "वैयक्तिक गरजेनुसार सिरॅमिक रिस्टोरेशन करून दातांमधील फटी बंद करणे, आकार सुधारणे आणि दात उजळ करणे." : "Gap closure, shape correction, and teeth whitening achieved through customized ceramic restorations for a flawless smile.",
   },
   {
     image: case1,
     treatment: lang === "mr" ? "डीप स्केलिंग आणि पॉलिशिंग" : "Deep Scaling & Polishing",
-    description: lang === "mr" ? "निरोगी हिरड्या आणि स्वच्छ दात पुनर्संचयित करण्यासाठी टार्टर आणि डाग पूर्णपणे काढून टाकणे." : "Complete removal of heavy tartar, calculus, and stains to restore healthy gums and clean teeth.",
+    description: lang === "mr" ? "हिरड्यांचे आरोग्य सुधारण्यासाठी आणि दात स्वच्छ करण्यासाठी साचलेला टार्टर, कॅल्क्युलस आणि डाग पूर्णपणे काढले." : "Complete removal of heavy tartar, calculus, and stains to restore healthy gums and clean teeth.",
   },
   {
     image: case2,
     treatment: lang === "mr" ? "सिंगल टूथ रिस्टोरेशन" : "Single Tooth Restoration",
-    description: lang === "mr" ? "धातू-मुक्त सिरॅमिक क्राउन वापरून नैसर्गिक दातांशी जुळण्यासाठी रंगहीन दात पुनर्संचयित केला." : "A discolored, non-vital front tooth flawlessly restored to match natural teeth using a metal-free ceramic crown.",
+    description: lang === "mr" ? "रंग बदललेल्या निर्जीव पुढच्या दातावर धातूमुक्त सिरॅमिक क्राउन बसवून तो नैसर्गिक दातांशी सुरेखपणे जुळवला." : "A discolored, non-vital front tooth flawlessly restored to match natural teeth using a metal-free ceramic crown.",
   },
   {
     image: case3,
     treatment: lang === "mr" ? "गॅप क्लोजर (Diastema)" : "Diastema (Gap) Closure",
-    description: lang === "mr" ? "वरच्या आणि खालच्या दातांमधील अंतर दात-रंगाच्या रिस्टोरेशनचा वापर करून सुंदरपणे बंद केले." : "Unappealing gaps between upper and lower teeth closed beautifully using customized tooth-colored restorations.",
+    description: lang === "mr" ? "वरच्या आणि खालच्या दातांमधील फटी वैयक्तिक गरजेनुसार दातांच्या रंगाचे रिस्टोरेशन वापरून सुरेखपणे बंद केल्या." : "Unappealing gaps between upper and lower teeth closed beautifully using customized tooth-colored restorations.",
   },
   {
     image: case4,
     treatment: lang === "mr" ? "कंपोझिट बाँडिंग" : "Composite Bonding",
-    description: lang === "mr" ? "दातांमधील अंतर बंद केले आणि कंपोझिट बाँडिंगसह पृष्ठभागावरील अपूर्णता झाकली." : "Front teeth gaps closed and surface imperfections masked with aesthetic, minimally invasive composite bonding.",
+    description: lang === "mr" ? "कमीत कमी हस्तक्षेपाच्या सौंदर्यपूर्ण कंपोझिट बाँडिंगने पुढच्या दातांमधील फटी बंद करून पृष्ठभागावरील दोष झाकले." : "Front teeth gaps closed and surface imperfections masked with aesthetic, minimally invasive composite bonding.",
   },
   {
     image: case5,
     treatment: lang === "mr" ? "ऑर्थोडोंटिक अलाइनमेंट" : "Orthodontic Alignment",
-    description: lang === "mr" ? "परिपूर्ण सरळ, कर्णमधुर हास्य प्राप्त करण्यासाठी गर्दी आणि चुकीची संरेखन दुरुस्त केली." : "Severe crowding and misalignment corrected to achieve a perfectly straight, harmonious smile.",
+    description: lang === "mr" ? "दातांची गर्दी आणि विस्कळीत मांडणी सुधारून सरळ, सुबक आणि सुसंगत हास्य मिळवले." : "Severe crowding and misalignment corrected to achieve a perfectly straight, harmonious smile.",
   },
 ];
 
@@ -324,12 +324,12 @@ function Home() {
           <Reveal>
             <p className={`${EYEBROW} text-white/85`}>
               <Sparkles className="mr-2 inline h-3.5 w-3.5 text-primary" />
-              Welcome to Dhanvantari Dental Clinic
+              {lang === "mr" ? "धन्वंतरी डेंटल क्लिनिकमध्ये आपले स्वागत आहे" : "Welcome to Dhanvantari Dental Clinic"}
             </p>
           </Reveal>
           <Reveal delay={120}>
             <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold text-white sm:text-5xl md:text-7xl">
-              Advanced Care for a{" "}
+              {lang === "mr" ? "तुमच्या" : "Advanced Care for a"}{" "}
               <span className="relative inline-block">
                 <span className="text-primary text-glow">{lang === "mr" ? "उज्ज्वल, निरोगी" : "Brighter, Healthier"}</span>
                 <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/20 blur-2xl" />
@@ -342,8 +342,7 @@ function Home() {
           </Reveal>
           <Reveal delay={240}>
             <p className="mx-auto mt-7 max-w-2xl text-base text-white/80 md:text-lg">
-              Gentle, modern dentistry in Solapur under the care of Dr. Sanika Sudha Kiranchandra
-              Phadke — general dentistry, smile designing and cosmetic dentistry in one calm clinic.
+              {lang === "mr" ? "डॉ. सानिका सुधा किरणचंद्र फडके यांच्या देखरेखीखाली सोलापूरमध्ये सौम्य व आधुनिक दंतोपचार — सामान्य दंतचिकित्सा, स्माईल डिझायनिंग आणि कॉस्मेटिक दंतचिकित्सा, सर्व एकाच शांत व आरामदायी क्लिनिकमध्ये." : "Gentle, modern dentistry in Solapur under the care of Dr. Sanika Sudha Kiranchandra Phadke — general dentistry, smile designing and cosmetic dentistry in one calm clinic."}
             </p>
           </Reveal>
           <Reveal delay={340}>
@@ -358,14 +357,13 @@ function Home() {
                 href="#services"
                 className="btn-outline-light inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
               >
-                View treatments
+                {lang === "mr" ? "उपचार पहा" : "View treatments"}
               </a>
             </div>
           </Reveal>
           <Reveal delay={440}>
             <p className="mt-8 text-sm text-white/75">
-              B.D.S. (MUHS) · Fellowship in General Dentistry · Fellowship in Smile Designing &amp;
-              Cosmetic Dentistry · IDA Fellowship programme
+              {lang === "mr" ? "बी.डी.एस. (MUHS) · जनरल डेंटिस्ट्री फेलोशिप · स्माईल डिझायनिंग आणि कॉस्मेटिक डेंटिस्ट्री फेलोशिप · IDA फेलोशिप कार्यक्रम" : "B.D.S. (MUHS) · Fellowship in General Dentistry · Fellowship in Smile Designing & Cosmetic Dentistry · IDA Fellowship programme"}
             </p>
           </Reveal>
         </div>
@@ -426,7 +424,7 @@ function Home() {
             <Reveal>
               <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "क्लिनिकबद्दल" : "About the clinic"}</p>
               <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-                {lang === "mr" ? "दैनंदिन आणि कॉस्मेटिक दंतचिकित्सेसाठी सोलापूरचे काळजीवाहू केंद्र" : "Solapur&apos;s caring centre for everyday and cosmetic dentistry"}
+                {lang === "mr" ? "नियमित आणि सौंदर्यवर्धक दंतोपचारांसाठी सोलापूरमधील विश्वासार्ह केंद्र" : "Solapur&apos;s caring centre for everyday and cosmetic dentistry"}
               </h2>
               <p className="mt-6 text-muted-foreground">
                 {lang === "mr" ? "धन्वंतरी मल्टीस्पेशालिटी डेंटल क्लिनिक शेटे नगर, लक्ष्मी पेठ येथील धन्वंतरी नर्सिंग होमच्या आवारात आहे. डॉ. सानिका सुधा किरणचंद्र फडके, बी.डी.एस. (MUHS), प्रत्येक उपचार योजनेत सामान्य दंतचिकित्सा आणि स्माईल डिझायनिंग व कॉस्मेटिक दंतचिकित्सेतील त्यांचे विशेष प्रशिक्षण (फेलोशिप) आणतात." : `Dhanvantari Multispeciality Dental Clinic sits inside Dhanvantari Nursing Home
@@ -463,7 +461,7 @@ function Home() {
                 href="#contact"
                 className="btn-accent mt-10 inline-flex items-center gap-3 rounded-full py-1.5 pr-1.5 pl-6 text-sm font-semibold"
               >
-                Visit the clinic
+                 {lang === "mr" ? "क्लिनिकला भेट द्या" : "Visit the clinic"}
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent text-accent-foreground">
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
@@ -484,13 +482,12 @@ function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आमच्या सेवा" : "Our services"}</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              Expert{" "}
+              {lang === "mr" ? "प्रत्येक गरजेसाठी तज्ज्ञ" : "Expert"}{" "}
               <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>{" "}
-              for every need
+              {lang === "mr" ? "" : "for every need"}
             </h2>
             <p className="mt-5 text-muted-foreground">
-              From routine check-ups to smile makeovers — planned around your teeth, your comfort
-              and your budget.
+              {lang === "mr" ? "नियमित तपासणीपासून संपूर्ण स्माईल मेकओव्हरपर्यंत — तुमचे दात, आराम आणि बजेट लक्षात घेऊन उपचारांचे नियोजन." : "From routine check-ups to smile makeovers — planned around your teeth, your comfort and your budget."}
             </p>
           </Reveal>
 
@@ -518,7 +515,7 @@ function Home() {
                       href="#contact"
                       className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold tracking-[0.18em] text-primary uppercase"
                     >
-                      Enquire <ArrowRight className="h-3.5 w-3.5" />
+                      {lang === "mr" ? "चौकशी करा" : "Enquire"} <ArrowRight className="h-3.5 w-3.5" />
                     </a>
                   </div>
                 </article>
@@ -540,16 +537,15 @@ function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>
               <Eye className="mr-2 inline h-3.5 w-3.5" />
-              Real results
+               {lang === "mr" ? "प्रत्यक्ष परिणाम" : "Real results"}
             </p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              Before{" "}
+               {lang === "mr" ? "उपचारापूर्वी" : "Before"}{" "}
               <span className="text-primary text-glow-soft">&amp;</span>{" "}
-              After
+               {lang === "mr" ? "उपचारानंतर" : "After"}
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Every smile tells a story. See real transformations by Dr. Sanika
-              Phadke — documented with the patient&apos;s consent.
+               {lang === "mr" ? "प्रत्येक हास्यामागे एक कहाणी असते. डॉ. सानिका फडके यांनी केलेले प्रत्यक्ष बदल पाहा — रुग्णांच्या संमतीने नोंदवलेले." : "Every smile tells a story. See real transformations by Dr. Sanika Phadke — documented with the patient's consent."}
             </p>
           </Reveal>
 
@@ -576,10 +572,10 @@ function Home() {
                     {/* Before / After labels */}
                     <div className="absolute right-4 bottom-4 flex gap-2">
                       <span className="rounded-full border border-white/30 bg-black/40 px-3 py-1 text-[0.65rem] font-semibold tracking-wider text-white/90 uppercase backdrop-blur-sm">
-                        Before
+                         {lang === "mr" ? "पूर्वी" : "Before"}
                       </span>
                       <span className="rounded-full bg-primary/80 px-3 py-1 text-[0.65rem] font-semibold tracking-wider text-primary-foreground uppercase backdrop-blur-sm">
-                        After
+                         {lang === "mr" ? "नंतर" : "After"}
                       </span>
                     </div>
                   </div>
@@ -630,19 +626,19 @@ function Home() {
         <Reveal className="relative mx-auto max-w-3xl px-5 text-center text-white">
           <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "क्लिनिकला भेट द्या" : "Visit clinic"}</p>
           <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-            Comprehensive{" "}
+             {lang === "mr" ? "सर्व वयोगटांसाठी सर्वसमावेशक" : "Comprehensive"}{" "}
             <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>{" "}
-            for all ages
+             {lang === "mr" ? "" : "for all ages"}
           </h2>
           <p className="mt-5 text-white/80">
-            Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
+             {lang === "mr" ? "धन्वंतरी नर्सिंग होम परिसर, १४२/ए, शेटे नगर, लक्ष्मी पेठ, सोलापूर – ४१३००१" : "Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001"}
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <a
               href={`tel:${PHONE}`}
               className="btn-accent inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
             >
-              <Phone className="h-4 w-4" /> Call {PHONE}
+               <Phone className="h-4 w-4" /> {lang === "mr" ? "कॉल करा" : "Call"} {PHONE}
             </a>
             <a
               href={MAP_URL}
@@ -650,7 +646,7 @@ function Home() {
               rel="noreferrer"
               className="btn-outline-light inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
             >
-              Get directions
+               {lang === "mr" ? "मार्गदर्शन मिळवा" : "Get directions"}
             </a>
           </div>
         </Reveal>
@@ -667,12 +663,11 @@ function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आम्हाला का निवडावे" : "Why choose us"}</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              A higher standard of{" "}
+               {lang === "mr" ? "उच्च दर्जाची" : "A higher standard of"}{" "}
               <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Advanced training, careful hands and a calm environment — so treatment feels simple
-              and safe.
+               {lang === "mr" ? "उच्च प्रशिक्षण, कुशल हात आणि शांत वातावरण — त्यामुळे उपचार सोपे आणि सुरक्षित वाटतात." : "Advanced training, careful hands and a calm environment — so treatment feels simple and safe."}
             </p>
           </Reveal>
           <div className="mt-14 grid gap-7 md:grid-cols-3">
@@ -716,10 +711,7 @@ function Home() {
             <Reveal from="right" delay={120}>
               <div className="space-y-5">
                 <p className="text-muted-foreground">
-                  Dr. Sanika combines careful clinical dentistry with an eye for aesthetics. Every
-                  visit begins with a proper diagnosis and a plain explanation of your options — so
-                  you always know what is being done and why. Patients come to her for pain-free
-                  routine treatment as much as for smile makeovers.
+                   {lang === "mr" ? "डॉ. सानिका अचूक दंतोपचारांना सौंदर्यदृष्टीची जोड देतात. प्रत्येक भेटीत योग्य निदान करून उपलब्ध पर्याय सोप्या भाषेत समजावून सांगितले जातात, त्यामुळे कोणता उपचार का केला जात आहे हे तुम्हाला स्पष्टपणे समजते. वेदनारहित नियमित उपचारांपासून स्माईल मेकओव्हरपर्यंत रुग्ण त्यांच्यावर विश्वास ठेवतात." : "Dr. Sanika combines careful clinical dentistry with an eye for aesthetics. Every visit begins with a proper diagnosis and a plain explanation of your options — so you always know what is being done and why. Patients come to her for pain-free routine treatment as much as for smile makeovers."}
                 </p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {[
@@ -740,7 +732,7 @@ function Home() {
                   href={`tel:${PHONE}`}
                   className="btn-accent inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
                 >
-                  <Phone className="h-4 w-4" /> Book with Dr. Sanika
+                   <Phone className="h-4 w-4" /> {lang === "mr" ? "डॉ. सानिका यांची अपॉइंटमेंट घ्या" : "Book with Dr. Sanika"}
                 </a>
               </div>
             </Reveal>
@@ -758,28 +750,28 @@ function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आमच्याशी संपर्क साधा" : "Contact us"}</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              Come in for a{" "}
-              <span className="text-primary text-glow-soft">{lang === "mr" ? "या" : "check-up"}</span>
+               {lang === "mr" ? "दातांच्या" : "Come in for a"}{" "}
+               <span className="text-primary text-glow-soft">{lang === "mr" ? "तपासणीसाठी या" : "check-up"}</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Call or message us and we will find a time that suits you.
+               {lang === "mr" ? "आम्हाला कॉल किंवा संदेश करा; तुमच्या सोयीची वेळ आम्ही निश्चित करू." : "Call or message us and we will find a time that suits you."}
             </p>
           </Reveal>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <div className="space-y-6">
               {[
-                { icon: Phone, title: "Call for appointment", body: PHONE, href: `tel:${PHONE}` },
+                 { icon: Phone, title: lang === "mr" ? "अपॉइंटमेंटसाठी कॉल करा" : "Call for appointment", body: PHONE, href: `tel:${PHONE}` },
                 {
                   icon: MessageCircle,
                   title: "WhatsApp",
-                  body: "Message us for a quick reply",
+                   body: lang === "mr" ? "त्वरित प्रतिसादासाठी संदेश पाठवा" : "Message us for a quick reply",
                   href: WHATSAPP,
                 },
                 {
                   icon: MapPin,
-                  title: "Clinic address",
-                  body: "Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001",
+                   title: lang === "mr" ? "क्लिनिकचा पत्ता" : "Clinic address",
+                   body: lang === "mr" ? "धन्वंतरी नर्सिंग होम परिसर, १४२/ए, शेटे नगर, लक्ष्मी पेठ, सोलापूर – ४१३००१" : "Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001",
                   href: MAP_URL,
                 },
                 {
@@ -842,13 +834,12 @@ function Home() {
                 className="h-12 w-12 rounded-full bg-white"
               />
               <span className="font-display text-sm font-bold">
-                Dhanvantari Multispeciality
+                 {lang === "mr" ? "धन्वंतरी मल्टीस्पेशालिटी" : "Dhanvantari Multispeciality"}
                 <span className="block text-xs font-medium text-white/70">{lang === "mr" ? "डेंटल क्लिनिक" : "Dental Clinic"}</span>
               </span>
             </div>
             <p className="mt-5 text-sm text-white/70">
-              Expert dental care in Solapur — general dentistry, smile designing and cosmetic
-              dentistry.
+               {lang === "mr" ? "सोलापूरमध्ये तज्ज्ञ दंतोपचार — सामान्य दंतचिकित्सा, स्माईल डिझायनिंग आणि कॉस्मेटिक दंतचिकित्सा." : "Expert dental care in Solapur — general dentistry, smile designing and cosmetic dentistry."}
             </p>
           </div>
           <div>
@@ -873,10 +864,10 @@ function Home() {
               </li>
               <li>
                 <a href={MAP_URL} target="_blank" rel="noreferrer" className="hover:text-primary">
-                  📍 Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
+                   📍 {lang === "mr" ? "धन्वंतरी नर्सिंग होम परिसर, १४२/ए, शेटे नगर, लक्ष्मी पेठ, सोलापूर – ४१३००१" : "Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001"}
                 </a>
               </li>
-              <li>Dr. Sanika Sudha Kiranchandra Phadke, B.D.S. (MUHS)</li>
+               <li>{lang === "mr" ? "डॉ. सानिका सुधा किरणचंद्र फडके, बी.डी.एस. (MUHS)" : "Dr. Sanika Sudha Kiranchandra Phadke, B.D.S. (MUHS)"}</li>
             </ul>
           </div>
         </div>
@@ -888,7 +879,7 @@ function Home() {
         href={`tel:${PHONE}`}
         className="btn-accent fixed right-5 bottom-5 z-40 inline-flex items-center gap-2 rounded-full px-5 py-3.5 text-sm font-semibold shadow-lift lg:hidden"
       >
-        <Phone className="h-4 w-4" /> Call now
+         <Phone className="h-4 w-4" /> {lang === "mr" ? "आता कॉल करा" : "Call now"}
       </a>
     </div>
   );
