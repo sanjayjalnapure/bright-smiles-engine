@@ -644,8 +644,8 @@ function Home() {
                 },
                 {
                   icon: Clock,
-                  title: "Timings",
-                  body: "Consultations by appointment — please call ahead",
+                  title: "Clinic timings",
+                  body: "Mon–Sat: 11 AM – 1 PM & 5 PM – 10 PM\nSunday: 11 AM – 2 PM",
                   href: `tel:${PHONE}`,
                 },
               ].map((c, i) => (
@@ -661,7 +661,7 @@ function Home() {
                     </span>
                     <span>
                       <span className="block font-display font-bold">{c.title}</span>
-                      <span className="mt-1 block text-sm text-muted-foreground">{c.body}</span>
+                      <span className="mt-1 block whitespace-pre-line text-sm text-muted-foreground">{c.body}</span>
                     </span>
                   </a>
                 </Reveal>
