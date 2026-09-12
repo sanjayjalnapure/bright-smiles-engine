@@ -232,7 +232,7 @@ function Home() {
             <span className="leading-tight">
               <span className="block font-display text-sm font-bold sm:text-base">{lang === "mr" ? "धन्वंतरी" : "Dhanvantari"}</span>
               <span className="block text-[0.6rem] tracking-[0.18em] text-muted-foreground uppercase sm:text-[0.65rem]">
-                Multispeciality Dental Clinic
+                {lang === "mr" ? "मल्टीस्पेशालिटी डेंटल क्लिनिक" : "Multispeciality Dental Clinic"}
               </span>
             </span>
           </a>
@@ -417,7 +417,7 @@ function Home() {
               />
               <span className="animate-float absolute -top-6 right-4 flex h-24 w-24 flex-col items-center justify-center rounded-full bg-primary text-center font-display text-xs font-bold text-primary-foreground shadow-lift">
                 <span className="text-xl">3</span>
-                Specialities
+                {lang === "mr" ? "वैशिष्ट्ये" : "Specialities"}
               </span>
             </div>
           </Reveal>
@@ -426,27 +426,27 @@ function Home() {
             <Reveal>
               <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "क्लिनिकबद्दल" : "About the clinic"}</p>
               <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-                Solapur&apos;s caring centre for everyday and cosmetic dentistry
+                {lang === "mr" ? "दैनंदिन आणि कॉस्मेटिक दंतचिकित्सेसाठी सोलापूरचे काळजीवाहू केंद्र" : "Solapur&apos;s caring centre for everyday and cosmetic dentistry"}
               </h2>
               <p className="mt-6 text-muted-foreground">
-                Dhanvantari Multispeciality Dental Clinic sits inside Dhanvantari Nursing Home
+                {lang === "mr" ? "धन्वंतरी मल्टीस्पेशालिटी डेंटल क्लिनिक शेटे नगर, लक्ष्मी पेठ येथील धन्वंतरी नर्सिंग होमच्या आवारात आहे. डॉ. सानिका सुधा किरणचंद्र फडके, बी.डी.एस. (MUHS), प्रत्येक उपचार योजनेत सामान्य दंतचिकित्सा आणि स्माईल डिझायनिंग व कॉस्मेटिक दंतचिकित्सेतील त्यांचे विशेष प्रशिक्षण (फेलोशिप) आणतात." : `Dhanvantari Multispeciality Dental Clinic sits inside Dhanvantari Nursing Home
                 premises at Shete Nagar, Laxmi Peth. Dr. Sanika Sudha Kiranchandra Phadke, B.D.S.
                 (MUHS), brings fellowship training in general dentistry and in smile designing &amp;
-                cosmetic dentistry to every treatment plan.
+                cosmetic dentistry to every treatment plan.`}
               </p>
               <p className="mt-4 text-muted-foreground">
-                From a simple cleaning to a full smile makeover, you get a proper diagnosis, honest
+                {lang === "mr" ? "साध्या साफसफाईपासून ते संपूर्ण स्माईल मेकओव्हरपर्यंत, तुम्हाला योग्य निदान, प्रामाणिक पर्याय आणि सर्वकाही सुरू होण्यापूर्वी स्पष्ट खर्च मिळतो — एका संपूर्ण निर्जंतुक आणि आरामदायी वातावरणात." : `From a simple cleaning to a full smile makeover, you get a proper diagnosis, honest
                 options and a clear cost before anything starts — in a thoroughly sterilised,
-                comfortable setting.
+                comfortable setting.`}
               </p>
             </Reveal>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 "B.D.S. (MUHS)",
-                "Fellowship in General Dentistry",
-                "Fellowship in Smile Designing",
-                "Fellowship in Cosmetic Dentistry",
-                "IDA Fellowship programme",
+                lang === "mr" ? "फेलोशिप इन जनरल डेंटिस्ट्री" : "Fellowship in General Dentistry",
+                lang === "mr" ? "फेलोशिप इन स्माईल डिझायनिंग" : "Fellowship in Smile Designing",
+                lang === "mr" ? "फेलोशिप इन कॉस्मेटिक डेंटिस्ट्री" : "Fellowship in Cosmetic Dentistry",
+                lang === "mr" ? "IDA फेलोशिप कार्यक्रम" : "IDA Fellowship programme",
               ].map((q, i) => (
                 <Reveal key={q} delay={i * 100}>
                   <div className="flex items-center gap-3 text-sm font-semibold">
@@ -610,9 +610,7 @@ function Home() {
           {/* Trust note */}
           <Reveal delay={500} className="mt-10 text-center">
             <p className="text-xs text-muted-foreground/80">
-              All photographs are of actual patients treated at Dhanvantari
-              Multispeciality Dental Clinic and published with consent.
-              Individual results may vary.
+              {lang === "mr" ? "सर्व छायाचित्रे धन्वंतरी मल्टीस्पेशालिटी डेंटल क्लिनिकमध्ये उपचार घेतलेल्या प्रत्यक्ष रुग्णांची आहेत आणि त्यांच्या संमतीने प्रकाशित केली आहेत. वैयक्तिक परिणाम भिन्न असू शकतात." : "All photographs are of actual patients treated at Dhanvantari Multispeciality Dental Clinic and published with consent. Individual results may vary."}
             </p>
           </Reveal>
         </div>
@@ -726,9 +724,9 @@ function Home() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   {[
                     { icon: GraduationCap, t: "B.D.S. (MUHS)" },
-                    { icon: Award, t: "Fellowship in General Dentistry" },
-                    { icon: Smile, t: "Fellowship in Smile Designing" },
-                    { icon: Sparkles, t: "Fellowship in Cosmetic Dentistry" },
+                    { icon: Award, t: lang === "mr" ? "फेलोशिप इन जनरल डेंटिस्ट्री" : "Fellowship in General Dentistry" },
+                    { icon: Smile, t: lang === "mr" ? "फेलोशिप इन स्माईल डिझायनिंग" : "Fellowship in Smile Designing" },
+                    { icon: Sparkles, t: lang === "mr" ? "फेलोशिप इन कॉस्मेटिक डेंटिस्ट्री" : "Fellowship in Cosmetic Dentistry" },
                   ].map((q) => (
                     <div
                       key={q.t}
