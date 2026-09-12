@@ -22,7 +22,7 @@ Dental Services / Specialization
  Cosmetic Dentistry
 
 Clinic Address
-Dhanvantari Nursing Home
+Dhanvantari Nursing Home premises
 142/A, Shete Nagar, Laxmi Peth,
 Solapur, Maharashtra – 413001, India
 
@@ -41,7 +41,7 @@ Expert Dental Care in Solapur
 Dr. Sanika Sudha Kiranchandra Phadke, B.D.S. (MUHS)
 General Dentistry • Smile Designing • Cosmetic Dentistry
 📞 9168362233
-📍 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
+📍 Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
 
 map link - https://maps.app.goo.gl/mwtY7YMqPcS7rMus8     and i provided some picture use it  and remaining use ai photos
 

@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "General dentistry, smile designing and cosmetic dentistry at Shete Nagar, Laxmi Peth, Solapur.",
+          "General dentistry, smile designing and cosmetic dentistry at Dhanvantari Nursing Home premises, Shete Nagar, Laxmi Peth, Solapur.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -377,10 +377,10 @@ function Home() {
                 Solapur&apos;s caring centre for everyday and cosmetic dentistry
               </h2>
               <p className="mt-6 text-muted-foreground">
-                Dhanvantari Multispeciality Dental Clinic sits inside Dhanvantari Nursing Home at
-                Shete Nagar, Laxmi Peth. Dr. Sanika Sudha Kiranchandra Phadke, B.D.S. (MUHS), brings
-                fellowship training in general dentistry and in smile designing &amp; cosmetic
-                dentistry to every treatment plan.
+                Dhanvantari Multispeciality Dental Clinic sits inside Dhanvantari Nursing Home
+                premises at Shete Nagar, Laxmi Peth. Dr. Sanika Sudha Kiranchandra Phadke, B.D.S.
+                (MUHS), brings fellowship training in general dentistry and in smile designing &amp;
+                cosmetic dentistry to every treatment plan.
               </p>
               <p className="mt-4 text-muted-foreground">
                 From a simple cleaning to a full smile makeover, you get a proper diagnosis, honest
@@ -495,7 +495,7 @@ function Home() {
             for all ages
           </h2>
           <p className="mt-5 text-white/80">
-            Dhanvantari Nursing Home, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
+            Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <a
@@ -639,7 +639,7 @@ function Home() {
                 {
                   icon: MapPin,
                   title: "Clinic address",
-                  body: "Dhanvantari Nursing Home, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001",
+                  body: "Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001",
                   href: MAP_URL,
                 },
                 {
@@ -727,7 +727,7 @@ function Home() {
               </li>
               <li>
                 <a href={MAP_URL} target="_blank" rel="noreferrer" className="hover:text-primary">
-                  📍 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
+                  📍 Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
                 </a>
               </li>
               <li>Dr. Sanika Sudha Kiranchandra Phadke, B.D.S. (MUHS)</li>
