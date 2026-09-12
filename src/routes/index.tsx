@@ -73,11 +73,11 @@ const MAP_URL = "https://maps.app.goo.gl/mwtY7YMqPcS7rMus8";
 const getNav = (lang: Language) => [
   { label: lang === "mr" ? "मुख्यपृष्ठ" : "Home", href: "#home" },
   { label: lang === "mr" ? "आमच्याबद्दल" : "About Us", href: "#about" },
-  { label: "Treatments", href: "#services" },
+  { label: lang === "mr" ? "उपचार" : "Treatments", href: "#services" },
   { label: lang === "mr" ? "परिणाम" : "Results", href: "#results" },
-  { label: "Safety First", href: "#why" },
-  { label: "Our Clinic", href: "#clinic" },
-  { label: "Contact Us", href: "#contact" },
+  { label: lang === "mr" ? "सुरक्षा प्रथम" : "Safety First", href: "#why" },
+  { label: lang === "mr" ? "आमचे क्लिनिक" : "Our Clinic", href: "#clinic" },
+  { label: lang === "mr" ? "आमच्याशी संपर्क साधा" : "Contact Us", href: "#contact" },
 ];
 
 const getStats = (lang: Language) => [
@@ -230,7 +230,7 @@ function Home() {
               className="h-12 w-12 rounded-full"
             />
             <span className="leading-tight">
-              <span className="block font-display text-sm font-bold sm:text-base">Dhanvantari</span>
+              <span className="block font-display text-sm font-bold sm:text-base">{lang === "mr" ? "धन्वंतरी" : "Dhanvantari"}</span>
               <span className="block text-[0.6rem] tracking-[0.18em] text-muted-foreground uppercase sm:text-[0.65rem]">
                 Multispeciality Dental Clinic
               </span>
@@ -331,11 +331,11 @@ function Home() {
             <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold text-white sm:text-5xl md:text-7xl">
               Advanced Care for a{" "}
               <span className="relative inline-block">
-                <span className="text-primary text-glow">Brighter, Healthier</span>
+                <span className="text-primary text-glow">{lang === "mr" ? "उज्ज्वल, निरोगी" : "Brighter, Healthier"}</span>
                 <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/20 blur-2xl" />
               </span>{" "}
               <span className="relative inline-block">
-                <span className="text-white text-glow-soft">Smile</span>
+                <span className="text-white text-glow-soft">{lang === "mr" ? "हास्य" : "Smile"}</span>
                 <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/15 blur-2xl" />
               </span>
             </h1>
@@ -424,7 +424,7 @@ function Home() {
 
           <div>
             <Reveal>
-              <p className={`${EYEBROW} text-primary`}>About the clinic</p>
+              <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "क्लिनिकबद्दल" : "About the clinic"}</p>
               <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
                 Solapur&apos;s caring centre for everyday and cosmetic dentistry
               </h2>
@@ -482,10 +482,10 @@ function Home() {
         </div>
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className={`${EYEBROW} text-primary`}>Our services</p>
+            <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आमच्या सेवा" : "Our services"}</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
               Expert{" "}
-              <span className="text-primary text-glow-soft">dental care</span>{" "}
+              <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>{" "}
               for every need
             </h2>
             <p className="mt-5 text-muted-foreground">
@@ -555,7 +555,7 @@ function Home() {
 
           {/* Cases grid — show first 2 on initial load, expand to all */}
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {(showAllCases ? CASES : getCases(lang).slice(0, 3)).map((c, i) => (
+            {(showAllCases ? getCases(lang) : getCases(lang).slice(0, 3)).map((c, i) => (
               <Reveal key={i} delay={i * 120}>
                 <article className="card-lift group overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-soft">
                   <div className="relative overflow-hidden">
@@ -599,7 +599,7 @@ function Home() {
                 onClick={() => setShowAllCases((v) => !v)}
                 className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-sm font-semibold shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lift"
               >
-                {showAllCases ? "Show less" : `View all ${getCases(lang).length} cases`}
+                {showAllCases ? (lang === "mr" ? "कमी दाखवा" : "Show less") : (lang === "mr" ? `सर्व ${getCases(lang).length} प्रकरणे पहा` : `View all ${getCases(lang).length} cases`)}
                 <ChevronDown
                   className={`h-4 w-4 text-primary transition-transform duration-300 ${showAllCases ? "rotate-180" : ""}`}
                 />
@@ -630,10 +630,10 @@ function Home() {
         />
         <div aria-hidden className="surface-hero absolute inset-0" />
         <Reveal className="relative mx-auto max-w-3xl px-5 text-center text-white">
-          <p className={`${EYEBROW} text-primary`}>Visit clinic</p>
+          <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "क्लिनिकला भेट द्या" : "Visit clinic"}</p>
           <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
             Comprehensive{" "}
-            <span className="text-primary text-glow-soft">dental care</span>{" "}
+            <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>{" "}
             for all ages
           </h2>
           <p className="mt-5 text-white/80">
@@ -667,10 +667,10 @@ function Home() {
         </div>
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className={`${EYEBROW} text-primary`}>Why choose us</p>
+            <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आम्हाला का निवडावे" : "Why choose us"}</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
               A higher standard of{" "}
-              <span className="text-primary text-glow-soft">dental care</span>
+              <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
               Advanced training, careful hands and a calm environment — so treatment feels simple
@@ -701,8 +701,8 @@ function Home() {
         </div>
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className={`${EYEBROW} text-primary`}>Meet your dentist</p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Dr. Sanika Sudha Kiranchandra Phadke</h2>
+            <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "तुमच्या डेंटिस्टला भेटा" : "Meet your dentist"}</p>
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">{lang === "mr" ? "डॉ. सानिका सुधा किरणचंद्र फडके" : "Dr. Sanika Sudha Kiranchandra Phadke"}</h2>
           </Reveal>
           <div className="mt-14 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
             <Reveal from="left" className="flex h-full items-center justify-center lg:justify-start">
@@ -758,10 +758,10 @@ function Home() {
         </div>
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className={`${EYEBROW} text-primary`}>Contact us</p>
+            <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आमच्याशी संपर्क साधा" : "Contact us"}</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
               Come in for a{" "}
-              <span className="text-primary text-glow-soft">check-up</span>
+              <span className="text-primary text-glow-soft">{lang === "mr" ? "या" : "check-up"}</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
               Call or message us and we will find a time that suits you.
@@ -845,7 +845,7 @@ function Home() {
               />
               <span className="font-display text-sm font-bold">
                 Dhanvantari Multispeciality
-                <span className="block text-xs font-medium text-white/70">Dental Clinic</span>
+                <span className="block text-xs font-medium text-white/70">{lang === "mr" ? "डेंटल क्लिनिक" : "Dental Clinic"}</span>
               </span>
             </div>
             <p className="mt-5 text-sm text-white/70">
@@ -854,7 +854,7 @@ function Home() {
             </p>
           </div>
           <div>
-            <h3 className="font-display text-sm font-bold tracking-[0.18em] uppercase">Explore</h3>
+            <h3 className="font-display text-sm font-bold tracking-[0.18em] uppercase">{lang === "mr" ? "अन्वेषण करा" : "Explore"}</h3>
             <ul className="mt-4 space-y-2 text-sm text-white/70">
               {getNav(lang).map((n) => (
                 <li key={n.href}>
@@ -866,7 +866,7 @@ function Home() {
             </ul>
           </div>
           <div>
-            <h3 className="font-display text-sm font-bold tracking-[0.18em] uppercase">Reach us</h3>
+            <h3 className="font-display text-sm font-bold tracking-[0.18em] uppercase">{lang === "mr" ? "आमच्याशी संपर्क साधा" : "Reach us"}</h3>
             <ul className="mt-4 space-y-3 text-sm text-white/70">
               <li>
                 <a href={`tel:${PHONE}`} className="hover:text-primary">
