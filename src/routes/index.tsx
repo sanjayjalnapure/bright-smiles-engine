@@ -867,9 +867,7 @@ function Home() {
             </ul>
           </div>
         </div>
-        <div className="mx-auto mt-12 max-w-7xl border-t border-white/15 px-5 pt-6 text-center text-xs text-white/55">
-          © {new Date().getFullYear()} Dhanvantari Multispeciality Dental Clinic, Solapur
-        </div>
+
       </footer>
 
       {/* Floating call */}
