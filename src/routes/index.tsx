@@ -661,7 +661,7 @@ function Home() {
                     </span>
                     <span>
                       <span className="block font-display font-bold">{c.title}</span>
-                      <span className="mt-1 block text-sm text-muted-foreground">{c.body}</span>
+                      <span className="mt-1 block whitespace-pre-line text-sm text-muted-foreground">{c.body}</span>
                     </span>
                   </a>
                 </Reveal>
