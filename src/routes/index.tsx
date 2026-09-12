@@ -42,6 +42,7 @@ import case2 from "@/assets/case-2.jpg";
 import case3 from "@/assets/case-3.jpg";
 import case4 from "@/assets/case-4.jpg";
 import case5 from "@/assets/case-5.jpg";
+import case6 from "@/assets/case-6.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -151,29 +152,34 @@ const WHY = [
 
 const CASES = [
   {
+    image: case6,
+    treatment: "Complete Smile Makeover",
+    description: "Gap closure, shape correction, and teeth whitening achieved through customized ceramic restorations for a flawless smile.",
+  },
+  {
     image: case1,
-    treatment: "Smile Makeover",
-    description: "Full smile rehabilitation with ceramic crowns — staining and uneven teeth corrected in two visits.",
+    treatment: "Deep Scaling & Polishing",
+    description: "Complete removal of heavy tartar, calculus, and stains to restore healthy gums and clean teeth.",
   },
   {
     image: case2,
-    treatment: "Cosmetic Dentistry",
-    description: "Alignment correction and whitening for a healthier, more confident smile.",
+    treatment: "Single Tooth Restoration",
+    description: "A discolored, non-vital front tooth flawlessly restored to match natural teeth using a metal-free ceramic crown.",
   },
   {
     image: case3,
-    treatment: "Orthodontic Alignment",
-    description: "Crowded teeth straightened and gaps closed for improved bite and aesthetics.",
+    treatment: "Diastema (Gap) Closure",
+    description: "Unappealing gaps between upper and lower teeth closed beautifully using customized tooth-colored restorations.",
   },
   {
     image: case4,
-    treatment: "Smile Designing",
-    description: "Shape and shade balanced across the smile line for a natural, symmetrical result.",
+    treatment: "Composite Bonding",
+    description: "Front teeth gaps closed and surface imperfections masked with aesthetic, minimally invasive composite bonding.",
   },
   {
     image: case5,
-    treatment: "Deep Scaling & Restoration",
-    description: "Heavy tartar and staining removed, followed by composite restorations for a clean, bright finish.",
+    treatment: "Orthodontic Alignment",
+    description: "Severe crowding and misalignment corrected to achieve a perfectly straight, harmonious smile.",
   },
 ];
 
@@ -584,7 +590,7 @@ function Home() {
                 onClick={() => setShowAllCases((v) => !v)}
                 className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-sm font-semibold shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lift"
               >
-                {showAllCases ? "Show fewer" : `View all ${CASES.length} cases`}
+                {showAllCases ? "Show less" : `View all ${CASES.length} cases`}
                 <ChevronDown
                   className={`h-4 w-4 text-primary transition-transform duration-300 ${showAllCases ? "rotate-180" : ""}`}
                 />
