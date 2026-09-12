@@ -21,20 +21,27 @@ import {
   Scan,
   Box,
   Armchair,
+  ChevronDown,
+  Eye,
 } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/Counter";
-import logo from "@/assets/logo.png.asset.json";
-import clinicEntrance from "@/assets/clinic-entrance.png.asset.json";
+import logo from "@/assets/logo.png";
+import clinicEntrance from "@/assets/clinic-entrance.png";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import smileDesign from "@/assets/smile-design.jpg";
 import generalDentistry from "@/assets/general-dentistry.jpg";
 import cosmeticDentistry from "@/assets/cosmetic-dentistry.jpg";
 import digitalXray from "@/assets/digital-xray.jpg";
 import printing3d from "@/assets/3d-printing.jpg";
-import dentalChair from "@/assets/dental-chair-unit.jpg.asset.json";
-import doctorPhoto from "@/assets/doctor-sanika-phadke.jpg.asset.json";
+import dentalChair from "@/assets/dental-chair-unit.jpg";
+import doctorPhoto from "@/assets/doctor-sanika-phadke.jpg";
+import case1 from "@/assets/case-1.jpg";
+import case2 from "@/assets/case-2.jpg";
+import case3 from "@/assets/case-3.jpg";
+import case4 from "@/assets/case-4.jpg";
+import case5 from "@/assets/case-5.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,6 +73,7 @@ const NAV = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Treatments", href: "#services" },
+  { label: "Results", href: "#results" },
   { label: "Safety First", href: "#why" },
   { label: "Our Clinic", href: "#clinic" },
   { label: "Contact Us", href: "#contact" },
@@ -117,7 +125,7 @@ const SERVICES = [
   },
   {
     title: "Advanced Dental Chair Unit",
-    image: dentalChair.url,
+    image: dentalChair,
     icon: Armchair,
     text: "A fully equipped, ergonomic dental chair unit designed for patient comfort and precise treatment delivery.",
   },
@@ -141,11 +149,40 @@ const WHY = [
   },
 ];
 
+const CASES = [
+  {
+    image: case1,
+    treatment: "Smile Makeover",
+    description: "Full smile rehabilitation with ceramic crowns — staining and uneven teeth corrected in two visits.",
+  },
+  {
+    image: case2,
+    treatment: "Cosmetic Dentistry",
+    description: "Alignment correction and whitening for a healthier, more confident smile.",
+  },
+  {
+    image: case3,
+    treatment: "Orthodontic Alignment",
+    description: "Crowded teeth straightened and gaps closed for improved bite and aesthetics.",
+  },
+  {
+    image: case4,
+    treatment: "Smile Designing",
+    description: "Shape and shade balanced across the smile line for a natural, symmetrical result.",
+  },
+  {
+    image: case5,
+    treatment: "Deep Scaling & Restoration",
+    description: "Heavy tartar and staining removed, followed by composite restorations for a clean, bright finish.",
+  },
+];
+
 const EYEBROW = "text-xs font-semibold tracking-[0.28em] uppercase";
 
 function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showAllCases, setShowAllCases] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -177,7 +214,7 @@ function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5">
           <a href="#home" className="flex items-center gap-3">
             <img
-              src={logo.url}
+              src={logo}
               alt="Dhanvantari Multispeciality Dental Clinic logo"
               width={56}
               height={56}
@@ -348,7 +385,7 @@ function Home() {
           <Reveal from="left">
             <div className="relative pb-16 pl-0 sm:pl-12">
               <img
-                src={clinicEntrance.url}
+                src={clinicEntrance}
                 alt="Entrance of Dhanvantari Multispeciality Dental Clinic in Solapur"
                 loading="lazy"
                 width={1200}
@@ -476,6 +513,96 @@ function Home() {
         </div>
       </section>
 
+      {/* Before & After Results */}
+      <section id="results" className="relative py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-1/4 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
+          <div className="absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-secondary/50 blur-[100px]" />
+          <div className="absolute top-1/3 right-8 h-20 w-20 rounded-full border border-primary/10" />
+          <div className="absolute bottom-1/4 left-12 h-14 w-14 rounded-full border border-primary/15" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className={`${EYEBROW} text-primary`}>
+              <Eye className="mr-2 inline h-3.5 w-3.5" />
+              Real results
+            </p>
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+              Before{" "}
+              <span className="text-primary text-glow-soft">&amp;</span>{" "}
+              After
+            </h2>
+            <p className="mt-5 text-muted-foreground">
+              Every smile tells a story. See real transformations by Dr. Sanika
+              Phadke — documented with the patient&apos;s consent.
+            </p>
+          </Reveal>
+
+          {/* Cases grid — show first 2 on initial load, expand to all */}
+          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {(showAllCases ? CASES : CASES.slice(0, 3)).map((c, i) => (
+              <Reveal key={i} delay={i * 120}>
+                <article className="card-lift group overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-soft">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={c.image}
+                      alt={`${c.treatment} — before and after by Dr. Sanika Phadke`}
+                      loading="lazy"
+                      width={600}
+                      height={800}
+                      className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    {/* Gradient overlay at bottom of image */}
+                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
+                    {/* Treatment badge */}
+                    <span className="absolute top-4 left-4 rounded-full bg-primary/90 px-4 py-1.5 text-xs font-bold tracking-wider text-primary-foreground uppercase backdrop-blur-sm">
+                      {c.treatment}
+                    </span>
+                    {/* Before / After labels */}
+                    <div className="absolute right-4 bottom-4 flex gap-2">
+                      <span className="rounded-full border border-white/30 bg-black/40 px-3 py-1 text-[0.65rem] font-semibold tracking-wider text-white/90 uppercase backdrop-blur-sm">
+                        Before
+                      </span>
+                      <span className="rounded-full bg-primary/80 px-3 py-1 text-[0.65rem] font-semibold tracking-wider text-primary-foreground uppercase backdrop-blur-sm">
+                        After
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-base font-bold">{c.treatment}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{c.description}</p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Show more / less toggle */}
+          {CASES.length > 3 && (
+            <Reveal delay={400} className="mt-10 text-center">
+              <button
+                onClick={() => setShowAllCases((v) => !v)}
+                className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-sm font-semibold shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lift"
+              >
+                {showAllCases ? "Show fewer" : `View all ${CASES.length} cases`}
+                <ChevronDown
+                  className={`h-4 w-4 text-primary transition-transform duration-300 ${showAllCases ? "rotate-180" : ""}`}
+                />
+              </button>
+            </Reveal>
+          )}
+
+          {/* Trust note */}
+          <Reveal delay={500} className="mt-10 text-center">
+            <p className="text-xs text-muted-foreground/80">
+              All photographs are of actual patients treated at Dhanvantari
+              Multispeciality Dental Clinic and published with consent.
+              Individual results may vary.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Visit clinic banner */}
       <section id="clinic" className="relative overflow-hidden py-28 md:py-36">
         <img
@@ -565,7 +692,7 @@ function Home() {
           <div className="mt-14 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
             <Reveal from="left" className="flex h-full items-center justify-center lg:justify-start">
               <img
-                src={doctorPhoto.url}
+                src={doctorPhoto}
                 alt="Dr. Sanika Sudha Kiranchandra Phadke at Dhanvantari Multispeciality Dental Clinic"
                 loading="lazy"
                 width={852}
@@ -688,7 +815,7 @@ function Home() {
           <div>
             <div className="flex items-center gap-3">
               <img
-                src={logo.url}
+                src={logo}
                 alt="Dhanvantari Multispeciality Dental Clinic logo"
                 loading="lazy"
                 width={48}
