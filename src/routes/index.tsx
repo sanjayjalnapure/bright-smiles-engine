@@ -70,11 +70,11 @@ const PHONE = "9168362233";
 const WHATSAPP = "https://wa.me/919168362233";
 const MAP_URL = "https://maps.app.goo.gl/mwtY7YMqPcS7rMus8";
 
-const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
+const getNav = (lang: Language) => [
+  { label: lang === "mr" ? "मुख्यपृष्ठ" : "Home", href: "#home" },
+  { label: lang === "mr" ? "आमच्याबद्दल" : "About Us", href: "#about" },
   { label: "Treatments", href: "#services" },
-  { label: "Results", href: "#results" },
+  { label: lang === "mr" ? "परिणाम" : "Results", href: "#results" },
   { label: "Safety First", href: "#why" },
   { label: "Our Clinic", href: "#clinic" },
   { label: "Contact Us", href: "#contact" },
@@ -185,7 +185,10 @@ const CASES = [
 
 const EYEBROW = "text-xs font-semibold tracking-[0.28em] uppercase";
 
+export type Language = "en" | "mr";
+
 function Home() {
+  const [lang, setLang] = useState<Language>("en");
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [showAllCases, setShowAllCases] = useState(false);
@@ -235,7 +238,7 @@ function Home() {
           </a>
 
           <nav className="hidden items-center gap-7 xl:flex">
-            {NAV.map((n) => (
+            {getNav(lang).map((n) => (
               <a
                 key={n.href}
                 href={n.href}
@@ -247,6 +250,12 @@ function Home() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <button
+              onClick={() => setLang(l => l === "en" ? "mr" : "en")}
+              className="hidden items-center justify-center rounded-full border border-primary/30 px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary/10 sm:flex"
+            >
+              {lang === "en" ? "मराठी" : "EN"}
+            </button>
             <a
               href={WHATSAPP}
               target="_blank"
@@ -260,7 +269,7 @@ function Home() {
               href={`tel:${PHONE}`}
               className="btn-accent hidden items-center gap-3 rounded-full py-1.5 pr-1.5 pl-6 text-sm font-semibold md:inline-flex"
             >
-              Book Appointment
+              {lang === "mr" ? "अपॉइंटमेंट बुक करा" : "Book Appointment"}
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent text-accent-foreground">
                 <ArrowUpRight className="h-4 w-4" />
               </span>
@@ -273,7 +282,7 @@ function Home() {
 
         {open && (
           <div className="mx-5 mt-3 rounded-2xl bg-card p-4 shadow-lift xl:hidden">
-            {NAV.map((n) => (
+            {getNav(lang).map((n) => (
               <a
                 key={n.href}
                 href={n.href}
@@ -287,7 +296,7 @@ function Home() {
               href={`tel:${PHONE}`}
               className="btn-accent mt-3 flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold"
             >
-              <Phone className="h-4 w-4" /> Book Appointment
+              <Phone className="h-4 w-4" /> {lang === "mr" ? "अपॉइंटमेंट बुक करा" : "Book Appointment"}
             </a>
           </div>
         )}
@@ -820,6 +829,12 @@ function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
+            <button
+              onClick={() => setLang(l => l === "en" ? "mr" : "en")}
+              className="hidden items-center justify-center rounded-full border border-primary/30 px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary/10 sm:flex"
+            >
+              {lang === "en" ? "मराठी" : "EN"}
+            </button>
               <img
                 src={logo}
                 alt="Dhanvantari Multispeciality Dental Clinic logo"
@@ -841,7 +856,7 @@ function Home() {
           <div>
             <h3 className="font-display text-sm font-bold tracking-[0.18em] uppercase">Explore</h3>
             <ul className="mt-4 space-y-2 text-sm text-white/70">
-              {NAV.map((n) => (
+              {getNav(lang).map((n) => (
                 <li key={n.href}>
                   <a href={n.href} className="transition-colors hover:text-primary">
                     {n.label}
