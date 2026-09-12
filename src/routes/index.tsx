@@ -328,22 +328,36 @@ function Home() {
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold text-white sm:text-5xl md:text-7xl">
-              Advanced Care for a{" "}
-              <span className="relative inline-block">
-                <span className="text-primary text-glow">{lang === "mr" ? "उज्ज्वल, निरोगी" : "Brighter, Healthier"}</span>
-                <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/20 blur-2xl" />
-              </span>{" "}
-              <span className="relative inline-block">
-                <span className="text-white text-glow-soft">{lang === "mr" ? "हास्य" : "Smile"}</span>
-                <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/15 blur-2xl" />
-              </span>
-            </h1>
+            {lang === "mr" ? (
+              <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold text-white sm:text-5xl md:text-7xl">
+                <span className="relative inline-block">
+                  <span className="text-primary text-glow">उज्ज्वल, निरोगी</span>
+                  <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/20 blur-2xl" />
+                </span>{" "}
+                <span className="relative inline-block">
+                  <span className="text-white text-glow-soft">हास्यासाठी</span>
+                  <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/15 blur-2xl" />
+                </span>
+                {" "}प्रगत काळजी
+              </h1>
+            ) : (
+              <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold text-white sm:text-5xl md:text-7xl">
+                Advanced Care for a{" "}
+                <span className="relative inline-block">
+                  <span className="text-primary text-glow">Brighter, Healthier</span>
+                  <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/20 blur-2xl" />
+                </span>{" "}
+                <span className="relative inline-block">
+                  <span className="text-white text-glow-soft">Smile</span>
+                  <span aria-hidden className="absolute -inset-6 -z-10 rounded-full bg-primary/15 blur-2xl" />
+                </span>
+              </h1>
+            )}
           </Reveal>
           <Reveal delay={240}>
             <p className="mx-auto mt-7 max-w-2xl text-base text-white/80 md:text-lg">
-              Gentle, modern dentistry in Solapur under the care of Dr. Sanika Sudha Kiranchandra
-              Phadke — general dentistry, smile designing and cosmetic dentistry in one calm clinic.
+              {lang === "mr" ? `डॉ. सानिका सुधा किरणचंद्र फडके यांच्या देखरेखीखाली सोलापुरातील सौम्य, आधुनिक दंतचिकित्सा - एकाच शांत क्लिनिकमध्ये सामान्य दंतचिकित्सा, स्माईल डिझायनिंग आणि कॉस्मेटिक दंतचिकित्सा.` : `Gentle, modern dentistry in Solapur under the care of Dr. Sanika Sudha Kiranchandra
+              Phadke - general dentistry, smile designing and cosmetic dentistry in one calm clinic.`}
             </p>
           </Reveal>
           <Reveal delay={340}>
@@ -483,14 +497,18 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आमच्या सेवा" : "Our services"}</p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              Expert{" "}
-              <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>{" "}
-              for every need
-            </h2>
+            {lang === "mr" ? (
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                प्रत्येक गरजेसाठी <span className="text-primary text-glow-soft">तज्ञ दंत काळजी</span>
+              </h2>
+            ) : (
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                Expert <span className="text-primary text-glow-soft">dental care</span> for every need
+              </h2>
+            )}
             <p className="mt-5 text-muted-foreground">
-              From routine check-ups to smile makeovers — planned around your teeth, your comfort
-              and your budget.
+              {lang === "mr" ? `नियमित तपासणीपासून ते स्माईल मेकओव्हरपर्यंत - तुमचे दात, तुमची सोय आणि तुमचे बजेट लक्षात घेऊन नियोजन केले जाते.` : `From routine check-ups to smile makeovers - planned around your teeth, your comfort
+              and your budget.`}
             </p>
           </Reveal>
 
@@ -542,14 +560,18 @@ function Home() {
               <Eye className="mr-2 inline h-3.5 w-3.5" />
               Real results
             </p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              Before{" "}
-              <span className="text-primary text-glow-soft">&amp;</span>{" "}
-              After
-            </h2>
+            {lang === "mr" ? (
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                उपचारापूर्वी <span className="text-primary text-glow-soft">आणि</span> नंतर
+              </h2>
+            ) : (
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                Before <span className="text-primary text-glow-soft">&amp;</span> After
+              </h2>
+            )}
             <p className="mt-5 text-muted-foreground">
-              Every smile tells a story. See real transformations by Dr. Sanika
-              Phadke — documented with the patient&apos;s consent.
+              {lang === "mr" ? `प्रत्येक हास्य एक कथा सांगते. डॉ. सानिका फडके यांनी केलेले खरे बदल पहा - जे रुग्णांच्या संमतीने दस्तऐवजीकरण केले आहेत.` : `Every smile tells a story. See real transformations by Dr. Sanika
+              Phadke - documented with the patient&apos;s consent.`}
             </p>
           </Reveal>
 
@@ -576,10 +598,10 @@ function Home() {
                     {/* Before / After labels */}
                     <div className="absolute right-4 bottom-4 flex gap-2">
                       <span className="rounded-full border border-white/30 bg-black/40 px-3 py-1 text-[0.65rem] font-semibold tracking-wider text-white/90 uppercase backdrop-blur-sm">
-                        Before
+                        {lang === "mr" ? "पूर्वी" : "Before"}
                       </span>
                       <span className="rounded-full bg-primary/80 px-3 py-1 text-[0.65rem] font-semibold tracking-wider text-primary-foreground uppercase backdrop-blur-sm">
-                        After
+                        {lang === "mr" ? "नंतर" : "After"}
                       </span>
                     </div>
                   </div>
@@ -629,11 +651,15 @@ function Home() {
         <div aria-hidden className="surface-hero absolute inset-0" />
         <Reveal className="relative mx-auto max-w-3xl px-5 text-center text-white">
           <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "क्लिनिकला भेट द्या" : "Visit clinic"}</p>
-          <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-            Comprehensive{" "}
-            <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>{" "}
-            for all ages
-          </h2>
+          {lang === "mr" ? (
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+              सर्व वयोगटांसाठी <span className="text-primary text-glow-soft">सर्वसमावेशक दंत काळजी</span>
+            </h2>
+          ) : (
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+              Comprehensive <span className="text-primary text-glow-soft">dental care</span> for all ages
+            </h2>
+          )}
           <p className="mt-5 text-white/80">
             Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
           </p>
@@ -666,13 +692,18 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आम्हाला का निवडावे" : "Why choose us"}</p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              A higher standard of{" "}
-              <span className="text-primary text-glow-soft">{lang === "mr" ? "दंत काळजी" : "dental care"}</span>
-            </h2>
+            {lang === "mr" ? (
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                <span className="text-primary text-glow-soft">दंत काळजीचा</span> उच्च दर्जा
+              </h2>
+            ) : (
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                A higher standard of <span className="text-primary text-glow-soft">dental care</span>
+              </h2>
+            )}
             <p className="mt-5 text-muted-foreground">
-              Advanced training, careful hands and a calm environment — so treatment feels simple
-              and safe.
+              {lang === "mr" ? `प्रगत प्रशिक्षण, काळजीपूर्वक हाताळणी आणि एक शांत वातावरण — जेणेकरून उपचार सोपे आणि सुरक्षित वाटतात.` : `Advanced training, careful hands and a calm environment - so treatment feels simple
+              and safe.`}
             </p>
           </Reveal>
           <div className="mt-14 grid gap-7 md:grid-cols-3">
@@ -716,10 +747,10 @@ function Home() {
             <Reveal from="right" delay={120}>
               <div className="space-y-5">
                 <p className="text-muted-foreground">
-                  Dr. Sanika combines careful clinical dentistry with an eye for aesthetics. Every
-                  visit begins with a proper diagnosis and a plain explanation of your options — so
+                  {lang === "mr" ? `डॉ. सानिका सौंदर्यदृष्टीसह काळजीपूर्वक क्लिनिकल दंतचिकित्सेची सांगड घालतात. प्रत्येक भेटीची सुरुवात योग्य निदानाने आणि तुमच्या पर्यायांच्या स्पष्ट स्पष्टीकरणाने होते — जेणेकरून तुम्हाला नेहमी माहित असते की काय आणि का केले जात आहे. स्माईल मेकओव्हर प्रमाणेच वेदनारहित नियमित उपचारांसाठीही रुग्ण त्यांच्याकडे येतात.` : `Dr. Sanika combines careful clinical dentistry with an eye for aesthetics. Every
+                  visit begins with a proper diagnosis and a plain explanation of your options - so
                   you always know what is being done and why. Patients come to her for pain-free
-                  routine treatment as much as for smile makeovers.
+                  routine treatment as much as for smile makeovers.`}
                 </p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {[
@@ -757,10 +788,15 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "आमच्याशी संपर्क साधा" : "Contact us"}</p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-              Come in for a{" "}
-              <span className="text-primary text-glow-soft">{lang === "mr" ? "या" : "check-up"}</span>
-            </h2>
+            {lang === "mr" ? (
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                <span className="text-primary text-glow-soft">तपासणीसाठी</span> या
+              </h2>
+            ) : (
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                Come in for a <span className="text-primary text-glow-soft">check-up</span>
+              </h2>
+            )}
             <p className="mt-5 text-muted-foreground">
               Call or message us and we will find a time that suits you.
             </p>
@@ -842,13 +878,13 @@ function Home() {
                 className="h-12 w-12 rounded-full bg-white"
               />
               <span className="font-display text-sm font-bold">
-                Dhanvantari Multispeciality
+                {lang === "mr" ? "धन्वंतरी मल्टीस्पेशालिटी" : "Dhanvantari Multispeciality"}
                 <span className="block text-xs font-medium text-white/70">{lang === "mr" ? "डेंटल क्लिनिक" : "Dental Clinic"}</span>
               </span>
             </div>
             <p className="mt-5 text-sm text-white/70">
-              Expert dental care in Solapur — general dentistry, smile designing and cosmetic
-              dentistry.
+              {lang === "mr" ? `सोलापुरातील तज्ञ दंत काळजी — सामान्य दंतचिकित्सा, स्माईल डिझायनिंग आणि कॉस्मेटिक दंतचिकित्सा.` : `Expert dental care in Solapur - general dentistry, smile designing and cosmetic
+              dentistry.`}
             </p>
           </div>
           <div>
