@@ -82,9 +82,9 @@ const getNav = (lang: Language) => [
 
 const getStats = (lang: Language) => [
   { n: 2, s: "", l: lang === "mr" ? "फेलोशिप्स" : "Fellowships" },
-  { n: 3, s: "", l: lang === "mr" ? "मुख्य वैशिष्ट्ये" : "Core Specialities" },
+  { n: 3, s: "", l: lang === "mr" ? "मुख्य उपचार क्षेत्रे" : "Core Specialities" },
   { n: 100, s: "%", l: lang === "mr" ? "निर्जंतुक प्रोटोकॉल" : "Sterile Protocol" },
-  { n: 1, s: ":1", l: lang === "mr" ? "डॉक्टरांचे लक्ष" : "Doctor Attention" },
+  { n: 1, s: ":1", l: lang === "mr" ? "वैयक्तिक डॉक्टरांचे लक्ष" : "Personal Doctor Attention" },
 ];
 
 const getServices = (lang: Language) => [
@@ -92,37 +92,37 @@ const getServices = (lang: Language) => [
     title: lang === "mr" ? "सामान्य दंतचिकित्सा" : "General Dentistry",
     image: generalDentistry,
     icon: Stethoscope,
-    text: "Check-ups, scaling, tooth-coloured fillings, root canal treatment and extractions — done gently and hygienically.",
+    text: lang === "mr" ? "तपासणी, स्केलिंग, दातांच्या रंगाचे फिलिंग, रूट कॅनॉल उपचार आणि दात काढणे — सौम्य व स्वच्छतापूर्ण पद्धतीने." : "Check-ups, scaling, tooth-coloured fillings, root canal treatment and extractions — performed gently and hygienically.",
   },
   {
     title: lang === "mr" ? "स्माईल डिझायनिंग" : "Smile Designing",
     image: smileDesign,
     icon: Smile,
-    text: "A smile planned around your face — shape, shade and proportion balanced so the result still looks like you.",
+    text: lang === "mr" ? "तुमच्या चेहऱ्याला अनुरूप हास्य — दातांचा आकार, रंगछटा आणि प्रमाण यांचा नैसर्गिक समतोल साधून." : "A smile planned around your face — balancing shape, shade and proportion for a natural result that still looks like you.",
   },
   {
     title: lang === "mr" ? "कॉस्मेटिक दंतचिकित्सा" : "Cosmetic Dentistry",
     image: cosmeticDentistry,
     icon: Sparkles,
-    text: "Veneers, whitening and ceramic crowns using precise, tooth-friendly techniques for a natural finish.",
+    text: lang === "mr" ? "नैसर्गिक दिसणाऱ्या परिणामांसाठी अचूक आणि दातांना अनुकूल तंत्रांनी व्हिनिअर्स, व्हाइटनिंग आणि सिरॅमिक क्राउन्स." : "Veneers, whitening and ceramic crowns using precise, tooth-friendly techniques for a natural finish.",
   },
   {
     title: lang === "mr" ? "वेदनारहित रूट कॅनॉल" : "Painless Root Canals",
     image: heroClinic,
     icon: ShieldCheck,
-    text: "Single-visit root canal therapy with modern rotary instruments and effective local anaesthesia.",
+    text: lang === "mr" ? "आधुनिक रोटरी उपकरणे आणि प्रभावी स्थानिक भूल वापरून एकाच भेटीत रूट कॅनॉल उपचार." : "Single-visit root canal treatment with modern rotary instruments and effective local anaesthesia.",
   },
   {
     title: lang === "mr" ? "डिजिटल एक्स-रे" : "Digital X-Ray",
     image: digitalXray,
     icon: Scan,
-    text: "Low-radiation digital radiography for instant, high-resolution images that guide accurate diagnosis.",
+    text: lang === "mr" ? "अचूक निदानासाठी तत्काळ, उच्च-गुणवत्तेची प्रतिमा देणारी कमी किरणोत्सर्गाची डिजिटल रेडिओग्राफी." : "Low-radiation digital radiography provides instant, high-resolution images for accurate diagnosis.",
   },
   {
-    title: "3D Printing of Tooth Models",
+    title: lang === "mr" ? "दातांच्या मॉडेल्सची 3D प्रिंटिंग" : "3D Printing of Tooth Models",
     image: printing3d,
     icon: Box,
-    text: "Precise 3D-printed tooth models for treatment planning, crowns, aligners and patient education.",
+    text: lang === "mr" ? "उपचार नियोजन, क्राउन्स, अलाइनर्स आणि रुग्णांना उपचार समजावून सांगण्यासाठी अचूक 3D-प्रिंटेड दातांची मॉडेल्स." : "Precise 3D-printed tooth models for treatment planning, crowns, aligners and patient education.",
   },
   {
     title: lang === "mr" ? "प्रगत डेंटल चेअर युनिट" : "Advanced Dental Chair Unit",
@@ -135,18 +135,18 @@ const getServices = (lang: Language) => [
 const getWhy = (lang: Language) => [
   {
     icon: HeartHandshake,
-    title: "Maximum Comfort",
-    text: "Calm, unhurried treatment with everything explained in plain language before it begins.",
+    title: lang === "mr" ? "कमाल आराम" : "Maximum Comfort",
+    text: lang === "mr" ? "उपचार सुरू करण्यापूर्वी प्रत्येक गोष्ट सोप्या भाषेत समजावून, शांतपणे आणि पुरेसा वेळ देऊन उपचार केले जातात." : "Calm, unhurried treatment, with everything explained in plain language before it begins.",
   },
   {
     icon: Timer,
-    title: "Optimal Efficiency",
-    text: "Appointment-based slots so your treatment starts on time, with minimal waiting.",
+    title: lang === "mr" ? "कार्यक्षम सेवा" : "Efficient Care",
+    text: lang === "mr" ? "कमीत कमी प्रतीक्षा आणि वेळेवर उपचार सुरू व्हावेत यासाठी नियोजित अपॉइंटमेंट्स." : "Scheduled appointments help your treatment begin on time with minimal waiting.",
   },
   {
     icon: ShieldCheck,
-    title: "Uncompromising Safety",
-    text: "Autoclaved instruments and single-use disposables for every single patient, every visit.",
+    title: lang === "mr" ? "सुरक्षिततेशी तडजोड नाही" : "Uncompromising Safety",
+    text: lang === "mr" ? "प्रत्येक रुग्णासाठी, प्रत्येक भेटीत ऑटोक्लेव्हद्वारे निर्जंतुक केलेली उपकरणे आणि एकदाच वापरण्याचे साहित्य." : "Autoclaved instruments and single-use disposables for every patient, at every visit.",
   },
 ];
 
@@ -324,7 +324,7 @@ function Home() {
           <Reveal>
             <p className={`${EYEBROW} text-white/85`}>
               <Sparkles className="mr-2 inline h-3.5 w-3.5 text-primary" />
-              Welcome to Dhanvantari Dental Clinic
+              {lang === "mr" ? "धन्वंतरी डेंटल क्लिनिकमध्ये आपले स्वागत आहे" : "Welcome to Dhanvantari Dental Clinic"}
             </p>
           </Reveal>
           <Reveal delay={120}>
@@ -372,14 +372,13 @@ function Home() {
                 href="#services"
                 className="btn-outline-light inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
               >
-                View treatments
+                 {lang === "mr" ? "उपचार पाहा" : "View treatments"}
               </a>
             </div>
           </Reveal>
           <Reveal delay={440}>
             <p className="mt-8 text-sm text-white/75">
-              B.D.S. (MUHS) · Fellowship in General Dentistry · Fellowship in Smile Designing &amp;
-              Cosmetic Dentistry · IDA Fellowship programme
+               {lang === "mr" ? "बी.डी.एस. (MUHS) · जनरल डेंटिस्ट्रीमधील फेलोशिप · स्माईल डिझायनिंग आणि कॉस्मेटिक डेंटिस्ट्रीमधील फेलोशिप · IDA फेलोशिप कार्यक्रम" : "B.D.S. (MUHS) · Fellowship in General Dentistry · Fellowship in Smile Designing & Cosmetic Dentistry · IDA Fellowship Programme"}
             </p>
           </Reveal>
         </div>
@@ -440,7 +439,7 @@ function Home() {
             <Reveal>
               <p className={`${EYEBROW} text-primary`}>{lang === "mr" ? "क्लिनिकबद्दल" : "About the clinic"}</p>
               <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
-                {lang === "mr" ? "दैनंदिन आणि कॉस्मेटिक दंतचिकित्सेसाठी सोलापूरचे काळजीवाहू केंद्र" : "Solapur&apos;s caring centre for everyday and cosmetic dentistry"}
+                 {lang === "mr" ? "सोलापुरात प्रत्येक हास्यासाठी विश्वासार्ह दंतसेवा" : "Compassionate dental care for every smile in Solapur"}
               </h2>
               <p className="mt-6 text-muted-foreground">
                 {lang === "mr" ? "धन्वंतरी मल्टीस्पेशालिटी डेंटल क्लिनिक शेटे नगर, लक्ष्मी पेठ येथील धन्वंतरी नर्सिंग होमच्या आवारात आहे. डॉ. सानिका सुधा किरणचंद्र फडके, बी.डी.एस. (MUHS), प्रत्येक उपचार योजनेत सामान्य दंतचिकित्सा आणि स्माईल डिझायनिंग व कॉस्मेटिक दंतचिकित्सेतील त्यांचे विशेष प्रशिक्षण (फेलोशिप) आणतात." : `Dhanvantari Multispeciality Dental Clinic sits inside Dhanvantari Nursing Home
@@ -477,7 +476,7 @@ function Home() {
                 href="#contact"
                 className="btn-accent mt-10 inline-flex items-center gap-3 rounded-full py-1.5 pr-1.5 pl-6 text-sm font-semibold"
               >
-                Visit the clinic
+                 {lang === "mr" ? "क्लिनिकला भेट द्या" : "Visit the clinic"}
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent text-accent-foreground">
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
@@ -536,7 +535,7 @@ function Home() {
                       href="#contact"
                       className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold tracking-[0.18em] text-primary uppercase"
                     >
-                      Enquire <ArrowRight className="h-3.5 w-3.5" />
+                       {lang === "mr" ? "चौकशी करा" : "Enquire"} <ArrowRight className="h-3.5 w-3.5" />
                     </a>
                   </div>
                 </article>
@@ -558,7 +557,7 @@ function Home() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className={`${EYEBROW} text-primary`}>
               <Eye className="mr-2 inline h-3.5 w-3.5" />
-              Real results
+               {lang === "mr" ? "प्रत्यक्ष परिणाम" : "Real results"}
             </p>
             {lang === "mr" ? (
               <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
@@ -661,14 +660,14 @@ function Home() {
             </h2>
           )}
           <p className="mt-5 text-white/80">
-            Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001
+             {lang === "mr" ? "धन्वंतरी नर्सिंग होम परिसर, १४२/ए, शेटे नगर, लक्ष्मी पेठ, सोलापूर – ४१३००१" : "Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001"}
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <a
               href={`tel:${PHONE}`}
               className="btn-accent inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
             >
-              <Phone className="h-4 w-4" /> Call {PHONE}
+               <Phone className="h-4 w-4" /> {lang === "mr" ? `कॉल करा ${PHONE}` : `Call ${PHONE}`}
             </a>
             <a
               href={MAP_URL}
@@ -676,7 +675,7 @@ function Home() {
               rel="noreferrer"
               className="btn-outline-light inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
             >
-              Get directions
+               {lang === "mr" ? "मार्गदर्शन मिळवा" : "Get directions"}
             </a>
           </div>
         </Reveal>
@@ -771,7 +770,7 @@ function Home() {
                   href={`tel:${PHONE}`}
                   className="btn-accent inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
                 >
-                  <Phone className="h-4 w-4" /> Book with Dr. Sanika
+                   <Phone className="h-4 w-4" /> {lang === "mr" ? "डॉ. सानिका यांची अपॉइंटमेंट घ्या" : "Book with Dr. Sanika"}
                 </a>
               </div>
             </Reveal>
@@ -798,24 +797,24 @@ function Home() {
               </h2>
             )}
             <p className="mt-5 text-muted-foreground">
-              Call or message us and we will find a time that suits you.
+               {lang === "mr" ? "आम्हाला कॉल किंवा मेसेज करा; आम्ही तुमच्यासाठी सोयीची वेळ ठरवू." : "Call or message us, and we’ll find a time that suits you."}
             </p>
           </Reveal>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <div className="space-y-6">
               {[
-                { icon: Phone, title: "Call for appointment", body: PHONE, href: `tel:${PHONE}` },
+                 { icon: Phone, title: lang === "mr" ? "अपॉइंटमेंटसाठी कॉल करा" : "Call for an appointment", body: PHONE, href: `tel:${PHONE}` },
                 {
                   icon: MessageCircle,
                   title: "WhatsApp",
-                  body: "Message us for a quick reply",
+                   body: lang === "mr" ? "त्वरित प्रतिसादासाठी आम्हाला मेसेज करा" : "Message us for a quick reply",
                   href: WHATSAPP,
                 },
                 {
                   icon: MapPin,
-                  title: "Clinic address",
-                  body: "Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001",
+                   title: lang === "mr" ? "क्लिनिकचा पत्ता" : "Clinic address",
+                   body: lang === "mr" ? "धन्वंतरी नर्सिंग होम परिसर, १४२/ए, शेटे नगर, लक्ष्मी पेठ, सोलापूर – ४१३००१" : "Dhanvantari Nursing Home premises, 142/A, Shete Nagar, Laxmi Peth, Solapur – 413001",
                   href: MAP_URL,
                 },
                 {
@@ -924,7 +923,7 @@ function Home() {
         href={`tel:${PHONE}`}
         className="btn-accent fixed right-5 bottom-5 z-40 inline-flex items-center gap-2 rounded-full px-5 py-3.5 text-sm font-semibold shadow-lift lg:hidden"
       >
-        <Phone className="h-4 w-4" /> Call now
+         <Phone className="h-4 w-4" /> {lang === "mr" ? "आता कॉल करा" : "Call now"}
       </a>
     </div>
   );
