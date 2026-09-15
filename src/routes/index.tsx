@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Phone,
   MapPin,
@@ -193,6 +193,16 @@ function Home() {
   const [open, setOpen] = useState(false);
   const [showAllCases, setShowAllCases] = useState(false);
   const [enquireOpen, setEnquireOpen] = useState(false);
+  const enquireRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!enquireOpen) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!enquireRef.current?.contains(e.target as Node)) setEnquireOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [enquireOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
