@@ -403,8 +403,7 @@ function Home() {
                         <MessageCircle className="h-4 w-4 text-primary" />
                         WhatsApp
                       </a>
-                    </div>
-                  </>
+                  </div>
                 )}
               </div>
               <a
