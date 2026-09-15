@@ -373,7 +373,7 @@ function Home() {
           </Reveal>
           <Reveal delay={340}>
             <div className="relative mt-9 flex flex-wrap items-center justify-center gap-4">
-              <div className="relative">
+              <div ref={enquireRef} className="relative">
                 <button
                   type="button"
                   onClick={() => setEnquireOpen((v) => !v)}
@@ -384,14 +384,7 @@ function Home() {
                   <ChevronDown className={`h-4 w-4 transition-transform ${enquireOpen ? "rotate-180" : ""}`} />
                 </button>
                 {enquireOpen && (
-                  <>
-                    <button
-                      type="button"
-                      aria-label="Close enquire menu"
-                      className="fixed inset-0 z-40 cursor-default"
-                      onClick={() => setEnquireOpen(false)}
-                    />
-                    <div className="absolute top-full left-1/2 z-50 mt-3 w-48 -translate-x-1/2 overflow-hidden rounded-2xl bg-white shadow-lift ring-1 ring-primary/15">
+                  <div className="absolute top-full left-1/2 z-50 mt-3 w-48 -translate-x-1/2 overflow-hidden rounded-2xl bg-white shadow-lift ring-1 ring-primary/15">
                       <a
                         href={`tel:${PHONE}`}
                         onClick={() => setEnquireOpen(false)}
