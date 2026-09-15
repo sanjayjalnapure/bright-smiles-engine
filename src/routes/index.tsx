@@ -192,6 +192,7 @@ function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [showAllCases, setShowAllCases] = useState(false);
+  const [enquireOpen, setEnquireOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -361,13 +362,48 @@ function Home() {
             </p>
           </Reveal>
           <Reveal delay={340}>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href={`tel:${PHONE}`}
-                className="btn-accent inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
-              >
-                <Phone className="h-4 w-4" /> {PHONE}
-              </a>
+            <div className="relative mt-9 flex flex-wrap items-center justify-center gap-4">
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setEnquireOpen((v) => !v)}
+                  aria-expanded={enquireOpen}
+                  className="btn-accent inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
+                >
+                  {lang === "mr" ? "चौकशी करा" : "Enquire"}
+                  <ChevronDown className={`h-4 w-4 transition-transform ${enquireOpen ? "rotate-180" : ""}`} />
+                </button>
+                {enquireOpen && (
+                  <>
+                    <button
+                      type="button"
+                      aria-label="Close enquire menu"
+                      className="fixed inset-0 z-40 cursor-default"
+                      onClick={() => setEnquireOpen(false)}
+                    />
+                    <div className="absolute top-full left-1/2 z-50 mt-3 w-48 -translate-x-1/2 overflow-hidden rounded-2xl bg-white shadow-lift ring-1 ring-primary/15">
+                      <a
+                        href={`tel:${PHONE}`}
+                        onClick={() => setEnquireOpen(false)}
+                        className="flex items-center gap-3 px-5 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-primary/10"
+                      >
+                        <Phone className="h-4 w-4 text-primary" />
+                        {lang === "mr" ? "कॉल करा" : "Call"}
+                      </a>
+                      <a
+                        href={WHATSAPP}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => setEnquireOpen(false)}
+                        className="flex items-center gap-3 border-t border-primary/10 px-5 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-primary/10"
+                      >
+                        <MessageCircle className="h-4 w-4 text-primary" />
+                        WhatsApp
+                      </a>
+                    </div>
+                  </>
+                )}
+              </div>
               <a
                 href="#services"
                 className="btn-outline-light inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
