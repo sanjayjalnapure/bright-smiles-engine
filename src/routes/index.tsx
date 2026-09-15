@@ -92,7 +92,7 @@ const getServices = (lang: Language) => [
     title: lang === "mr" ? "सामान्य दंतचिकित्सा" : "General Dentistry",
     image: generalDentistry,
     icon: Stethoscope,
-    text: lang === "mr" ? "तपासणी, स्केलिंग, दातांच्या रंगाचे फिलिंग, रूट कॅनॉल उपचार आणि दात काढणे — सौम्य व स्वच्छतापूर्ण पद्धतीने." : "Check-ups, scaling, tooth-coloured fillings, root canal treatment and extractions — performed gently and hygienically.",
+    text: lang === "mr" ? "तपासणी, व्यावसायिक स्केलिंग (दात साफसफाई व पॉलिशिंग), दातांच्या रंगाचे फिलिंग, रूट कॅनॉल उपचार आणि दात काढणे — सौम्य व स्वच्छतापूर्ण पद्धतीने." : "Check-ups, professional scaling (teeth cleaning and polishing), tooth-coloured fillings, root canal treatment and extractions — performed gently and hygienically.",
   },
   {
     title: lang === "mr" ? "स्माईल डिझायनिंग" : "Smile Designing",
@@ -158,7 +158,7 @@ const getCases = (lang: Language) => [
   },
   {
     image: case1,
-    treatment: lang === "mr" ? "डीप स्केलिंग आणि पॉलिशिंग" : "Deep Scaling & Polishing",
+    treatment: lang === "mr" ? "व्यावसायिक स्केलिंग (दात साफसफाई व पॉलिशिंग)" : "Professional Scaling (Teeth Cleaning & Polishing)",
     description: lang === "mr" ? "निरोगी हिरड्या आणि स्वच्छ दात पुनर्संचयित करण्यासाठी टार्टर आणि डाग पूर्णपणे काढून टाकणे." : "Complete removal of heavy tartar, calculus, and stains to restore healthy gums and clean teeth.",
   },
   {
