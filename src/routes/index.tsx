@@ -371,7 +371,7 @@ function Home() {
               Phadke - general dentistry, smile designing and cosmetic dentistry in one calm clinic.`}
             </p>
           </Reveal>
-          <Reveal delay={340}>
+          <Reveal delay={340} className="relative z-30">
             <div className="relative mt-9 flex flex-wrap items-center justify-center gap-4">
               <div ref={enquireRef} className="relative">
                 <button
@@ -384,11 +384,11 @@ function Home() {
                   <ChevronDown className={`h-4 w-4 transition-transform ${enquireOpen ? "rotate-180" : ""}`} />
                 </button>
                 {enquireOpen && (
-                  <div className="absolute top-full left-1/2 z-50 mt-3 w-48 -translate-x-1/2 overflow-hidden rounded-2xl bg-white shadow-lift ring-1 ring-primary/15">
+                  <div className="absolute top-full left-1/2 z-50 mt-3 w-52 -translate-x-1/2 overflow-hidden rounded-2xl bg-card shadow-lift ring-1 ring-border">
                       <a
                         href={`tel:${PHONE}`}
                         onClick={() => setEnquireOpen(false)}
-                        className="flex items-center gap-3 px-5 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-primary/10"
+                        className="flex min-h-12 w-full items-center gap-3 px-5 py-3.5 text-sm font-semibold text-card-foreground transition-colors hover:bg-primary/10 focus-visible:bg-primary/10 focus-visible:outline-none"
                       >
                         <Phone className="h-4 w-4 text-primary" />
                         {lang === "mr" ? "कॉल करा" : "Call"}
@@ -398,7 +398,7 @@ function Home() {
                         target="_blank"
                         rel="noreferrer"
                         onClick={() => setEnquireOpen(false)}
-                        className="flex items-center gap-3 border-t border-primary/10 px-5 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-primary/10"
+                        className="flex min-h-12 w-full items-center gap-3 border-t border-border px-5 py-3.5 text-sm font-semibold text-card-foreground transition-colors hover:bg-primary/10 focus-visible:bg-primary/10 focus-visible:outline-none"
                       >
                         <MessageCircle className="h-4 w-4 text-primary" />
                         WhatsApp
