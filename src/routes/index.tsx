@@ -28,7 +28,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/Counter";
 import logo from "@/assets/logo.png";
-import clinicEntrance from "@/assets/clinic-entrance.png";
+import clinicEntrance from "@/assets/clinic-entrance-new.jpg";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import smileDesign from "@/assets/smile-design.jpg";
 import generalDentistry from "@/assets/general-dentistry.jpg";
