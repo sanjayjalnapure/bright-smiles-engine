@@ -104,6 +104,60 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "alternate", hrefLang: "mr", href: "https://dhanvantaridentalcare.in/" },
+      { rel: "canonical", href: "https://dhanvantaridentalcare.in/" }
+    ],
+    scripts: [
+      {
+        tag: "script",
+        attrs: { type: "application/ld+json" },
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": ["Dentist", "LocalBusiness"],
+          "name": "Dhanvantari Multispeciality Dental Clinic",
+          "image": "https://dhanvantaridentalcare.in/assets/clinic-entrance-new.jpg",
+          "@id": "https://dhanvantaridentalcare.in",
+          "url": "https://dhanvantaridentalcare.in",
+          "telephone": "+919168362233",
+          "priceRange": "₹₹",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "142/A, Dhanvantari Nursing Home premises, Shete Nagar, Laxmi Peth",
+            "addressLocality": "Solapur",
+            "addressRegion": "Maharashtra",
+            "postalCode": "413001",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 17.6715,
+            "longitude": 75.9104
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:00",
+              "closes": "11:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "18:00",
+              "closes": "22:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Sunday",
+              "opens": "10:00",
+              "closes": "14:00"
+            }
+          ],
+          "sameAs": [
+            "https://dhanvantaridentalcare.in/"
+          ]
+        })
+      }
     ],
   }),
   shellComponent: RootShell,

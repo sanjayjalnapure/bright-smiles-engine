@@ -47,20 +47,33 @@ import case6 from "@/assets/case-6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+
       { title: "Dhanvantari Dental Clinic Solapur | Dr. Sanika Phadke" },
       {
         name: "description",
         content:
-          "Advanced dental care in Solapur — general dentistry, smile designing and cosmetic dentistry by Dr. Sanika Phadke, B.D.S. (MUHS). Call 9168362233.",
+          "Advanced dental care in Solapur — general dentistry, smile designing and cosmetic dentistry by Dr. Sanika Phadke. Call 9168362233.",
       },
+      { name: "keywords", content: "dental clinic solapur, dentist solapur, smile design solapur, cosmetic dentistry solapur, dhanvantari dental, Dr Sanika Phadke, root canal solapur, teeth cleaning solapur, best dentist solapur" },
+      { property: "og:url", content: "https://dhanvantaridentalcare.in/" },
       { property: "og:title", content: "Dhanvantari Dental Clinic Solapur | Dr. Sanika Phadke" },
+      { property: "og:site_name", content: "Dhanvantari Multispeciality Dental Clinic" },
+      { property: "og:locale", content: "en_IN" },
       {
         property: "og:description",
         content:
-          "General dentistry, smile designing and cosmetic dentistry at Dhanvantari Nursing Home premises, Shete Nagar, Laxmi Peth, Solapur.",
+          "General dentistry, smile designing and cosmetic dentistry at Dhanvantari Nursing Home premises, Solapur.",
       },
+      { property: "og:image", content: "https://dhanvantaridentalcare.in/assets/clinic-entrance-new.jpg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Dhanvantari Dental Clinic Solapur" },
+      { name: "twitter:description", content: "Advanced dental care in Solapur — general dentistry, smile designing and cosmetic dentistry." },
+      { name: "twitter:image", content: "https://dhanvantaridentalcare.in/assets/clinic-entrance-new.jpg" },
+      { name: "geo.region", content: "IN-MH" },
+      { name: "geo.placename", content: "Solapur" },
+      { name: "geo.position", content: "17.6715;75.9104" },
+      { name: "ICBM", content: "17.6715, 75.9104" },
     ],
   }),
   component: Home,
@@ -482,7 +495,7 @@ function Home() {
               <p className="mt-6 text-muted-foreground">
                 {lang === "mr" ? "धन्वंतरी मल्टीस्पेशालिटी डेंटल क्लिनिक शेटे नगर, लक्ष्मी पेठ येथील धन्वंतरी नर्सिंग होमच्या आवारात आहे. डॉ. सानिका सुधा किरणचंद्र फडके, बी.डी.एस. (MUHS), प्रत्येक उपचार योजनेत सामान्य दंतचिकित्सा आणि स्माईल डिझायनिंग व कॉस्मेटिक दंतचिकित्सेतील त्यांचे विशेष प्रशिक्षण (फेलोशिप) आणतात." : `Dhanvantari Multispeciality Dental Clinic sits inside Dhanvantari Nursing Home
                 premises at Shete Nagar, Laxmi Peth. Dr. Sanika Sudha Kiranchandra Phadke, B.D.S.
-                (MUHS), brings fellowship training in general dentistry and in smile designing &amp;
+                (MUHS), brings fellowship training in general dentistry and in smile designing &
                 cosmetic dentistry to every treatment plan.`}
               </p>
               <p className="mt-4 text-muted-foreground">
@@ -608,7 +621,7 @@ function Home() {
             )}
             <p className="mt-5 text-muted-foreground">
               {lang === "mr" ? `प्रत्येक हास्य एक कथा सांगते. डॉ. सानिका फडके यांनी केलेले खरे बदल पहा - जे रुग्णांच्या संमतीने दस्तऐवजीकरण केले आहेत.` : `Every smile tells a story. See real transformations by Dr. Sanika
-              Phadke - documented with the patient&apos;s consent.`}
+              Phadke - documented with the patient's consent.`}
             </p>
           </Reveal>
 
